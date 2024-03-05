@@ -1,0 +1,14 @@
+{
+    "peluches": [
+        {
+            "id": 0,
+            "title": "Pikachu Fluffy Peluche",
+            "price": 24.99,
+            "description": "The one and only, Ash's best friend Pikachu.",
+            "material": "Made with 99,9999% cotton",
+            "img": "./src/Jsons/images/pikachupeluche.png",
+            "category": "Peluche"
+        }
+        
+    ]
+}
