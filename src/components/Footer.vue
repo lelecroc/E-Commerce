@@ -3,5 +3,5 @@
 </script>
 
 <template>
-    <h1>ciao martina</h1>
+    <h1 class="text-desktop-sm">ciao martina</h1>
 </template>
