@@ -12,6 +12,7 @@
         },
         {
             "id": 1,
+            "name": "Bulbasaur",
             "title": "Bulbasaur Fluffy Peluche",
             "price": 17.99,
             "description": "The lovely grass type starter from Kanto Region.",
@@ -21,6 +22,7 @@
         },
         {
             "id": 2,
+            "name": "Charmeleon",
             "title": "Charmeleon Fluffy Peluche",
             "price": 18.99,
             "description": "Don't mess with him, you will regret it.",
@@ -30,6 +32,7 @@
         },
         {
             "id": 3,
+            "nome": "Cubchoo",
             "title": "Cubchoo Fluffy Peluche",
             "price": 16.49,
             "description": "This cute little bear can't stop sneezing, please give him a napkin",
@@ -39,6 +42,7 @@
         },
         {
             "id": 4,
+            "nome": "Darumaka",
             "title": "Darumaka Fluffy Peluche",
             "price": 19.99,
             "description": "A round, red Pokémon with short arms and legs and a stubby tail",
@@ -48,6 +52,7 @@
         },
         {
             "id": 5,
+            "nome": "Fennekin",
             "title": "Fennekin Fluffy Peluche",
             "price": 26.99,
             "description": "This tiny fox intimidates opponents by puffing hot air out of its ears.",
@@ -57,6 +62,7 @@
         },
         {
             "id": 6,
+            "nome": "Vueglipuff",
             "title": "Vueglipuff Fluffy Peluche",
             "price": 54.99,
             "description": "The mascotte of this e-commerce, so i think that's worth to buy (please).",
@@ -66,6 +72,7 @@
         },
         {
             "id": 7,
+            "nome": "Mew",
             "title": "Mew Fluffy Peluche",
             "price": 33.99,
             "description": "The legendary pokémon from Kanto region",
@@ -75,6 +82,7 @@
         },
         {
             "id": 8,
+            "name": "Tepig",
             "title": "Tepig Fluffy Peluche",
             "price": 19.99,
             "description": "This little pig could burn an entire city if he wants to. Luckly, he's a good boy",
@@ -84,6 +92,7 @@
         },
         {
             "id": 9,
+            "name": "Vaporeon",
             "title": "Vaporeon Fluffy Peluche",
             "price": 34.34,
             "description": "One of the best Eeveelutions ever made. 43 elur",
@@ -96,7 +105,7 @@
         {
             "id": 0,
             "title": "MBlastoise EX",
-            "price": 60.90,
+            "price": 60.99,
             "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
             "img": "./src/Jsons/images/cards/blastoisecard.png",
             "category": "Card" 
@@ -104,7 +113,7 @@
         {
             "id": 1,
             "title": "MCharizzard EX",
-            "price": 30.90,
+            "price": 30.99,
             "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
             "img": "./src/Jsons/images/cards/charizardcard.png",
             "category": "Card" 
@@ -120,7 +129,7 @@
         {
             "id": 3,
             "title": "MGardevoir EX",
-            "price": 49.90,
+            "price": 49.99,
             "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
             "img": "./src/Jsons/images/cards/gardevoircard.png",
             "category": "Card" 
@@ -136,7 +145,7 @@
         {
             "id": 5,
             "title": "Primal Groudon EX",
-            "price": 7.90,
+            "price": 7.99,
             "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
             "img": "./src/Jsons/images/cards/groudoncard.png",
             "category": "Card" 
@@ -144,7 +153,7 @@
         {
             "id": 6,
             "title": "Primal Kyogre EX",
-            "price": 17.90,
+            "price": 17.99,
             "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
             "img": "./src/Jsons/images/cards/kyogrecard.png",
             "category": "Card" 
