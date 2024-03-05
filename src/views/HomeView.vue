@@ -1,9 +1,13 @@
 <script>
 import ProductCard from '@/components/ProductCard.vue'
+import CardsCard from '@/components/CardsCard.vue'
+import GamesCard from '@/components/GamesCard.vue'
 
 export default {
   components: {
-    ProductCard
+    ProductCard,
+    CardsCard,
+    GamesCard
   }
 }
 </script>
@@ -43,9 +47,9 @@ export default {
     <h2 class="font-extrabold text-[35px] ml-5">Peluches</h2>
     <ProductCard />
     <h2 class="font-extrabold text-[35px] ml-5 mt-[90px]">Cards</h2>
-    <ProductCard />
+    <CardsCard />
     <h2 class="font-extrabold text-[35px] ml-5">Games</h2>
-    <ProductCard />
+    <GamesCard />
   </div>
 
 
