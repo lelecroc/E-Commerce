@@ -1,6 +1,6 @@
 <script>
 import ProductData from "@/Jsons/products.json"
-import ProductCard from "@/components/ProductCard.vue"
+import axios from "axios"
 
 export default {
     data() {
@@ -14,9 +14,6 @@ export default {
     },
     methods: {
 
-    },
-    components: {
-        ProductCard
     }
 }
 
