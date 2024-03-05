@@ -6,9 +6,7 @@ export default {
     data() {
         return {
             products: ProductData,
-            cards: ProductData.cards,
-            pokemonName: this.$route.params.name.toLowerCase(),
-            dataContainer: []
+            cards: ProductData.cards
         }
     },
     mounted() {
@@ -44,10 +42,6 @@ export default {
                 </div>
             </div>
         </div>
-    </div>
-    <!-- POKEDEX -->
-    <div>
-        <button @click="getPokemon">Clicca</button>
     </div>
     <!-- PRODOTTI SIMILI -->
     <div>

@@ -69,27 +69,4 @@ export default {
       </div>
     </ul>
   </div>
-
-  <!-- TEMPLATE TEST -->
-
-  <!-- <div>
-    <ul>
-      <div>
-        <li v-for="items in products.games">
-          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" />
-        </li>
-      </div>
-      <div>
-        <li v-for="items in products.peluches">
-          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" />
-        </li>
-      </div>
-      <div>
-        <li v-for="items in products.cards">
-          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" />
-        </li>
-      </div>
-    </ul>
-  </div> -->
-
 </template>

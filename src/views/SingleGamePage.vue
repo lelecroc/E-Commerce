@@ -43,10 +43,6 @@ export default {
             </div>
         </div>
     </div>
-    <!-- POKEDEX -->
-    <div>
-        <button @click="getPokemon">Clicca</button>
-    </div>
     <!-- PRODOTTI SIMILI -->
     <div>
 
