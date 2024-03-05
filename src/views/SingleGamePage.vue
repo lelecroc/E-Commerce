@@ -59,7 +59,7 @@ export default {
                         <!-- Description -->
                         <div class="w-full py-[10px] px-[20px] flex justify-between items-center">
                             <div>
-                                <RouterLink :to="'/game/' + items.name">
+                                <RouterLink :to="'/game/' + items.id">
                                     <h6 class="text-[24px] font-bold text-[#3B3232] mb-[-10px]">{{ items.title }}</h6>
                                 </RouterLink>
                                 <h6 class="text-[18px] font-medium text-[#3B3232]">{{ items.price }} €</h6>

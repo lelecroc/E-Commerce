@@ -1,7 +1,4 @@
 <script>
-import ProductCard from '@/components/ProductCard.vue'
-import CardsCard from '@/components/CardsCard.vue'
-import GamesCard from '@/components/GamesCard.vue'
 import TemplateCard from '@/components/TemplateCard.vue'
 import ProductData from "@/Jsons/products.json"
 
@@ -12,9 +9,6 @@ export default {
     }
   },
   components: {
-    ProductCard,
-    CardsCard,
-    GamesCard,
     TemplateCard
   }
 }

@@ -271,7 +271,7 @@
             "title": "Pokémon Y - Nintendo DS",
             "price": 59.99,
             "description": "The first pokémon game made in 3d. Is this good or bad? You decide! 6th Generation game",
-            "img": "src/Jsons/images/games/pokemony.png",
+            "img": "./src/Jsons/images/games/pokemony.png",
             "category": "Game" 
         }
     ]

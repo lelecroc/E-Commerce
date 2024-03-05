@@ -12,13 +12,19 @@ export default {
         }
     },
     mounted() {
-        console.log(this.$route.params.name)
+        console.log(this.$route.params.name);
+    },
+    updated(){
+        console.log(this.$route.params.name);
+        
     },
     methods: {
 
+        // CONTROLLA
+
         // getPokemon() {
-        //     console.log(this.pokemonName)
         //     this.pokemonName = this.$route.params.name.toLowerCase()
+        //     console.log(this.pokemonName)
         //     axios.get(`https://pokeapi.co/api/v2/pokemon/${this.pokemonName}`).then(response => {
         //         this.dataContainer = response.data
         //     }).catch(error => {
