@@ -2,12 +2,20 @@
 import ProductCard from '@/components/ProductCard.vue'
 import CardsCard from '@/components/CardsCard.vue'
 import GamesCard from '@/components/GamesCard.vue'
+import TemplateCard from '@/components/TemplateCard.vue'
+import ProductData from "@/Jsons/products.json"
 
 export default {
+  data() {
+    return {
+      products: ProductData,
+    }
+  },
   components: {
     ProductCard,
     CardsCard,
-    GamesCard
+    GamesCard,
+    TemplateCard
   }
 }
 </script>
@@ -52,5 +60,27 @@ export default {
     <GamesCard />
   </div>
 
+  <div>
+    <ul class="grid grid-cols-3">
+      <div>
+        <li v-for="items in products.games">
+        <TemplateCard :title= "items.title" :price="items.price" :imgSrc="items.img"/>
+      </li>
+      </div>
+      <div>
+        <li v-for="items in products.peluches">
+        <TemplateCard :title= "items.title" :price="items.price" :imgSrc="items.img"/>
+      </li>
+      </div>
+      <div>
+        <li v-for="items in products.cards">
+        <TemplateCard :title= "items.title" :price="items.price" :imgSrc="items.img"/>
+      </li>
+      </div>
+      
+      
+      
+    </ul>
+  </div>
 
 </template>

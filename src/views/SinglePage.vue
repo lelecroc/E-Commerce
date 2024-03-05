@@ -6,7 +6,9 @@ export default {
     data() {
         return {
             products: ProductData,
-            peluches: ProductData.peluches
+            peluches: ProductData.peluches,
+            pokemonName: this.$route.params.name.toLowerCase(),
+            dataContainer: []
         }
     },
     mounted() {
@@ -14,6 +16,17 @@ export default {
     },
     methods: {
 
+        // getPokemon() {
+        //     console.log(this.pokemonName)
+        //     this.pokemonName = this.$route.params.name.toLowerCase()
+        //     axios.get(`https://pokeapi.co/api/v2/pokemon/${this.pokemonName}`).then(response => {
+        //         this.dataContainer = response.data
+        //     }).catch(error => {
+        //         console.error("Errore", error)
+        //     })
+        //     console.log(this.dataContainer)
+        // }
+            
     }
 }
 
@@ -53,16 +66,17 @@ export default {
     </div>
     <!-- POKEDEX -->
     <div>
-
+        <button @click="getPokemon">Clicca</button>
     </div>
     <!-- PRODOTTI SIMILI -->
     <div>
-        
+
         <div>
             <h1 class="text-desktop-2xl font-bold ml-5">Prodotti simili</h1>
             <ul class="overflow-x-auto h-[480px] flex pb-2 pt-5">
                 <li v-for="items in peluches" class="ml-5">
-                    <div class="w-[300px] h-[420px] flex flex-col justify-center items-center shadow-xl rounded-lg " v-show="this.$route.params.name !== items.name">
+                    <div class="w-[300px] h-[420px] flex flex-col justify-center items-center shadow-xl rounded-lg "
+                        v-show="this.$route.params.name !== items.name">
                         <!-- Description -->
                         <div class="w-full py-[10px] px-[20px] flex justify-between items-center">
                             <div>
