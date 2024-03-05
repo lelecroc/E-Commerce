@@ -11,6 +11,5 @@
 </script>
 
 <template>
-    <img class="h-[300px] w-[300px]" :src="users.peluches.peluchePikachu.img"   alt="">
-    <p>{{ users.peluches.peluchePikachu.title }}</p>
+    
 </template>
