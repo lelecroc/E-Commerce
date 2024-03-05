@@ -1,5 +1,3 @@
-<!-- TO DO: rimuovere dimensioni fisse, sostituire dati dinamicamente -->
-
 <script>
 import ProductData from "@/Jsons/products.json"
 
@@ -7,7 +5,7 @@ export default {
   data() {
     return {
       products: ProductData,
-      peluches: ProductData.peluches
+      games: ProductData.games
     }
   }
 }
@@ -16,13 +14,13 @@ export default {
 
 <template>
 <ul class="overflow-x-auto h-[400px] flex pb-2 pt-5">
-    <li v-for="items in peluches" class="ml-5">
+    <li v-for="game in games" class="ml-5">
       <div class="w-[300px] flex flex-col justify-center items-center shadow-xl rounded-lg">
         <!-- Description -->
         <div class="w-full py-[10px] px-[20px] flex justify-between items-center">
           <div>
-            <h6 class="text-[24px] font-bold text-[#3B3232] mb-[-10px]">{{ items.name }}</h6>
-            <h6 class="text-[18px] font-medium text-[#3B3232]">{{ items.price }} €</h6>
+            <h6 class="text-[24px] font-bold text-[#3B3232] mb-[-10px]">{{ game.name }}</h6>
+            <h6 class="text-[18px] font-medium text-[#3B3232]">{{ game.price }} €</h6>
           </div>
           <div class="p-[10px] bg-[#d1d1d1] rounded-full">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-6 h-6">
@@ -34,7 +32,7 @@ export default {
         </div>
 
         <!-- img -->
-        <img :src="items.img" alt="Pika" class="w-[200px] rounded-lg">
+        <img :src="game.img" alt="Pika" class="w-[200px] rounded-lg">
 
 
 
