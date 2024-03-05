@@ -9,12 +9,6 @@
             <!-- DIV CONTAINER HEADER -->
             <div class="p-[10px]  ">
                 <div class="flex justify-between items-center">
-                    <!-- DIV CONTENENTE I LINK -->
-                    <div class="text-[18px] hidden md:flex">
-                        <button class="p-2 rounded-xl hover:bg-slate-700 hover:shadow-xl">Novità</button>
-                        <button class="p-2 rounded-xl hover:bg-slate-700">Vukedex</button>
-                    </div>
-
                     <button class=" text-[30px] font-extrabold">Vuekémon</button>
                     <button class="md:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="2.0" stroke="currentColor" class="w-8 h-8">
