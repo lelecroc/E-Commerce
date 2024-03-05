@@ -19,7 +19,7 @@ export default {
         <!-- Description -->
         <div class="w-full py-[10px] px-[20px] flex justify-between items-center">
           <div>
-            <h6 class="text-[24px] font-bold text-[#3B3232] mb-[-10px]">{{ game.name }}</h6>
+            <h6 class="text-[24px] font-bold text-[#3B3232] mb-[-10px]">{{ game.title }}</h6>
             <h6 class="text-[18px] font-medium text-[#3B3232]">{{ game.price }} €</h6>
           </div>
           <div class="p-[10px] bg-[#d1d1d1] rounded-full">
