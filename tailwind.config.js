@@ -5,7 +5,19 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+
+      },
+      fontSize: {
+        'desktop-xs': '14px',
+        'desktop-sm': '16px',
+        'desktop-md': '18px',
+        'desktop-lg': '24px',
+        'desktop-xl': '30px',
+        'desktop-2xl': '40px'
+      }
+    },
   },
   plugins: [],
 }
