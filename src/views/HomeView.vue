@@ -30,10 +30,12 @@ export default {
     <!-- div text -->
     <div class="w-[50%] flex flex-col justify-start ml-5">
       <h2 class="font-extrabold text-desktop-xl leading-[40px] mb-4">Welcome to our Vuekémon Store</h2>
-      <p class="font-semibold text-desktop-xs mb-7 pr-[400px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+      <p class="font-semibold text-desktop-xs mb-7 pr-[400px]">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Aspernatur
         consequuntur at expedita doloribus inventore accusantium veritatis earum blanditiis.</p>
       <div>
-        <span class="rounded-md font-semibold bg-[#ce88f0] text-white py-[10px] px-[8px] shadow-xl">Sconto: "Opinno"</span>
+        <span class="rounded-md font-semibold bg-[#ce88f0] text-white py-[10px] px-[8px] shadow-xl">Sconto:
+          "Opinno"</span>
         <span class="rounded-md border-2 border-[#ce88f0] py-[8px] px-[8px] ml-4 shadow-xl">Sconto: "Ciao123"</span>
       </div>
 
@@ -52,35 +54,48 @@ export default {
     </div>
   </div>
   <div>
-    <h2 class="font-extrabold text-[35px] ml-5">Peluches</h2>
-    <ProductCard />
-    <h2 class="font-extrabold text-[35px] ml-5 mt-[90px]">Cards</h2>
-    <CardsCard />
-    <h2 class="font-extrabold text-[35px] ml-5">Games</h2>
-    <GamesCard />
+    <ul>
+      <h2 class="font-extrabold text-[35px] ml-5">Peluches</h2>
+      <div class="flex overflow-x-auto">
+        <li class="ml-5" v-for="items in products.peluches">
+          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="peluche/" :spec="items.name" />
+        </li>
+      </div>
+      <h2 class="font-extrabold text-[35px] ml-5 mt-[90px]">Cards</h2>
+      <div class="flex overflow-x-auto">
+        <li class="ml-5" v-for="items in products.cards">
+          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="card/" :spec="items.name"/>
+        </li>
+      </div>
+      <h2 class="font-extrabold text-[35px] ml-5 mt-[90px]">Games</h2>
+      <div class="flex overflow-x-auto">
+        <li class="ml-5" v-for="items in products.games">
+          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="game/" :spec="items.id"/>
+        </li>
+      </div>
+    </ul>
   </div>
 
-  <div>
-    <ul class="grid grid-cols-3">
+  <!-- TEMPLATE TEST -->
+
+  <!-- <div>
+    <ul>
       <div>
         <li v-for="items in products.games">
-        <TemplateCard :title= "items.title" :price="items.price" :imgSrc="items.img"/>
-      </li>
+          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" />
+        </li>
       </div>
       <div>
         <li v-for="items in products.peluches">
-        <TemplateCard :title= "items.title" :price="items.price" :imgSrc="items.img"/>
-      </li>
+          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" />
+        </li>
       </div>
       <div>
         <li v-for="items in products.cards">
-        <TemplateCard :title= "items.title" :price="items.price" :imgSrc="items.img"/>
-      </li>
+          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" />
+        </li>
       </div>
-      
-      
-      
     </ul>
-  </div>
+  </div> -->
 
 </template>
