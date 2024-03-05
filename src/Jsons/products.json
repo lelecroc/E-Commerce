@@ -32,7 +32,7 @@
         },
         {
             "id": 3,
-            "nome": "Cubchoo",
+            "name": "Cubchoo",
             "title": "Cubchoo Fluffy Peluche",
             "price": 16.49,
             "description": "This cute little bear can't stop sneezing, please give him a napkin",
@@ -42,7 +42,7 @@
         },
         {
             "id": 4,
-            "nome": "Darumaka",
+            "name": "Darumaka",
             "title": "Darumaka Fluffy Peluche",
             "price": 19.99,
             "description": "A round, red Pokémon with short arms and legs and a stubby tail",
@@ -52,7 +52,7 @@
         },
         {
             "id": 5,
-            "nome": "Fennekin",
+            "name": "Fennekin",
             "title": "Fennekin Fluffy Peluche",
             "price": 26.99,
             "description": "This tiny fox intimidates opponents by puffing hot air out of its ears.",
@@ -62,7 +62,7 @@
         },
         {
             "id": 6,
-            "nome": "Vueglipuff",
+            "name": "Vueglipuff",
             "title": "Vueglipuff Fluffy Peluche",
             "price": 54.99,
             "description": "The mascotte of this e-commerce, so i think that's worth to buy (please).",
@@ -72,7 +72,7 @@
         },
         {
             "id": 7,
-            "nome": "Mew",
+            "name": "Mew",
             "title": "Mew Fluffy Peluche",
             "price": 33.99,
             "description": "The legendary pokémon from Kanto region",
