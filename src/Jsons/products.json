@@ -47,8 +47,253 @@
             "price": 24.99,
             "description": "The one and only, Ash's best friend Pikachu.",
             "material": "Made with 99,9999% cotton",
-            "img": "./src/Jsons/images/pikachupeluche.png",
+            "img": "./src/Jsons/images/peluches/pikachupeluche.png",
             "category": "Peluche"
+        },
+        {
+            "id": 1,
+            "title": "Bulbasaur Fluffy Peluche",
+            "price": 17.99,
+            "description": "The lovely grass type starter from Kanto Region.",
+            "material": "Made with 66,666% bulbasaur",
+            "img": "./src/Jsons/images/peluches/bulbasaurpeluche.png",
+            "category": "Peluche"
+        },
+        {
+            "id": 2,
+            "title": "Charmeleon Fluffy Peluche",
+            "price": 18.99,
+            "description": "Don't mess with him, you will regret it.",
+            "material": "Made with 99% fire",
+            "img": "./src/Jsons/images/peluches/charmeleonpeluche.png",
+            "category": "Peluche"
+        },
+        {
+            "id": 3,
+            "title": "Cubchoo Fluffy Peluche",
+            "price": 16.49,
+            "description": "This cute little bear can't stop sneezing, please give him a napkin",
+            "material": "Made with 85,48% sneeze",
+            "img": "./src/Jsons/images/peluches/cubchoopeluche.png",
+            "category": "Peluche"
+        },
+        {
+            "id": 4,
+            "title": "Darumaka Fluffy Peluche",
+            "price": 19.99,
+            "description": "A round, red Pokémon with short arms and legs and a stubby tail",
+            "material": "Made with 99,9999% cotton",
+            "img": "./src/Jsons/images/peluches/darumakapeluche.png",
+            "category": "Peluche"
+        },
+        {
+            "id": 5,
+            "title": "Fennekin Fluffy Peluche",
+            "price": 26.99,
+            "description": "This tiny fox intimidates opponents by puffing hot air out of its ears.",
+            "material": "Made with 99,9999% cotton",
+            "img": "./src/Jsons/images/peluches/fennekinpeluche.png",
+            "category": "Peluche"
+        },
+        {
+            "id": 6,
+            "title": "Vueglipuff Fluffy Peluche",
+            "price": 54.99,
+            "description": "The mascotte of this e-commerce, so i think that's worth to buy (please).",
+            "material": "Made with 88,88% puff",
+            "img": "./src/Jsons/images/peluches/jigglypuffpeluche.png",
+            "category": "Peluche"
+        },
+        {
+            "id": 7,
+            "title": "Mew Fluffy Peluche",
+            "price": 33.99,
+            "description": "The legendary pokémon from Kanto region",
+            "material": "Made with 99,9999% cotton",
+            "img": "./src/Jsons/images/peluches/mewpeluche.png",
+            "category": "Peluche"
+        },
+        {
+            "id": 8,
+            "title": "Tepig Fluffy Peluche",
+            "price": 19.99,
+            "description": "This little pig could burn an entire city if he wants to. Luckly, he's a good boy",
+            "material": "Made with 100% fire",
+            "img": "./src/Jsons/images/peluches/tepigpeluche.png",
+            "category": "Peluche"
+        },
+        {
+            "id": 9,
+            "title": "Vaporeon Fluffy Peluche",
+            "price": 34.34,
+            "description": "One of the best Eeveelutions ever made. 43 elur",
+            "material": "Made with Love",
+            "img": "./src/Jsons/images/peluches/vaporeonpeluche.png",
+            "category": "Peluche"
+        }   
+    ],
+    "cards": [
+        {
+            "id": 0,
+            "title": "MBlastoise EX",
+            "price": 60.90,
+            "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
+            "img": "./src/Jsons/images/cards/blastoisecard.png",
+            "category": "Card" 
+        },
+        {
+            "id": 1,
+            "title": "MCharizzard EX",
+            "price": 30.90,
+            "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
+            "img": "./src/Jsons/images/cards/charizardcard.png",
+            "category": "Card" 
+        },
+        {
+            "id": 2,
+            "title": "MGarchomp EX",
+            "price": 19.23,
+            "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
+            "img": "./src/Jsons/images/cards/garchompcard.png",
+            "category": "Card" 
+        },
+        {
+            "id": 3,
+            "title": "MGardevoir EX",
+            "price": 49.90,
+            "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
+            "img": "./src/Jsons/images/cards/gardevoircard.png",
+            "category": "Card" 
+        },
+        {
+            "id": 4,
+            "title": "MGengar EX",
+            "price": 54.46,
+            "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
+            "img": "./src/Jsons/images/cards/gengarcard.png",
+            "category": "Card" 
+        },
+        {
+            "id": 5,
+            "title": "Primal Groudon EX",
+            "price": 7.90,
+            "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
+            "img": "./src/Jsons/images/cards/groudoncard.png",
+            "category": "Card" 
+        },
+        {
+            "id": 6,
+            "title": "Primal Kyogre EX",
+            "price": 17.90,
+            "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
+            "img": "./src/Jsons/images/cards/kyogrecard.png",
+            "category": "Card" 
+        },
+        {
+            "id": 7,
+            "title": "MMewtwo EX",
+            "price": 45.55,
+            "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
+            "img": "./src/Jsons/images/cards/mewtwocard.png",
+            "category": "Card" 
+        },
+        {
+            "id": 8,
+            "title": "MRayquaza EX",
+            "price": 53.75,
+            "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
+            "img": "./src/Jsons/images/cards/rayquazacard.png",
+            "category": "Card" 
+        },
+        {
+            "id": 9,
+            "title": "MVenusaur EX",
+            "price": 44.58,
+            "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
+            "img": "./src/Jsons/images/cards/venusaurcard.png",
+            "category": "Card" 
+        }
+    ],
+    "games": [
+        {
+            "id": 0,
+            "title": "Pokémon Black - Nintendo DS",
+            "price": 49.99,
+            "description": "Explore the Unova region and meet all the new pokémons that live here! 5th Generation game",
+            "img": "./src/Jsons/images/games/pokemonblack.jpg",
+            "category": "Game" 
+        },
+        {
+            "id": 1,
+            "title": "Pokémon Black 2 - Nintendo DS",
+            "price": 59.99,
+            "description": "Unova region changed, will Ghecis surrend this time? 5th Generation game",
+            "img": "./src/Jsons/images/games/pokemonblack2.jpeg",
+            "category": "Game" 
+        },
+        {
+            "id": 2,
+            "title": "Pokémon Diamond - Nintendo DS",
+            "price": 49.99,
+            "description": "Explore the Sinnoh region and discover the ancient history of the pokémon universe! 4th Generation game",
+            "img": "./src/Jsons/images/games/pokemondiamond.jpg",
+            "category": "Game" 
+        },
+        {
+            "id": 3,
+            "title": "Pokémon Emerald - GameBoy Advance",
+            "price": 79.99,
+            "description": "Explore the Hoenn Region carefully, this time you will have to fight against both Team Aqua and Team Magma. 3rd Generation game",
+            "img": "./src/Jsons/images/games/pokemonemerald.png",
+            "category": "Game" 
+        },
+        {
+            "id": 4,
+            "title": "Pokémon Red - GameBoy",
+            "price": 89.99,
+            "description": "One of the first pokémon games, set in the unforgettable Kanto Region. 1st Generation game",
+            "img": "./src/Jsons/images/games/pokemonred.png",
+            "category": "Game" 
+        },
+        {
+            "id": 5,
+            "title": "Pokémon Ruby - GameBoy Advance",
+            "price": 79.99,
+            "description": "Explore the Hoenn region and try to save the world from the awakening of Groudon. 3rd Generation game",
+            "img": "./src/Jsons/images/games/pokemonruby.png",
+            "category": "Game" 
+        },
+        {
+            "id": 6,
+            "title": "Pokémon Scarlet - Nintendo Switch",
+            "price": 69.99,
+            "description": "This game is a shame for the enitre brand, don't buy it unless you are a bad kiddo. 9th Generation game",
+            "img": "./src/Jsons/images/games/pokemonscarlet.png",
+            "category": "Game" 
+        },
+        {
+            "id": 7,
+            "title": "Pokémon Violet - Nintendo DS",
+            "price": 69.99,
+            "description": "This game is a shame for the enitre brand, don't buy it unless you are a bad kiddo. 9th Generation game",
+            "img": "./src/Jsons/images/games/pokemonviolet.png",
+            "category": "Game" 
+        },
+        {
+            "id": 8,
+            "title": "Pokémon X - Nintendo 3DS",
+            "price": 59.99,
+            "description": "The first pokémon game made in 3d. Is this good or bad? You decide! 6th Generation game",
+            "img": "./src/Jsons/images/games/pokemonx.png",
+            "category": "Game" 
+        },
+        {
+            "id": 9,
+            "title": "Pokémon Y - Nintendo DS",
+            "price": 59.99,
+            "description": "The first pokémon game made in 3d. Is this good or bad? You decide! 6th Generation game",
+            "img": "src/Jsons/images/games/pokemony.png",
+            "category": "Game" 
         }
     ]
 }
