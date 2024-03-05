@@ -12,12 +12,9 @@ export default {
     console.log(this.$route.params.name)
   },
   methods: {
-    
+
   }
 }
-
-
-
 
 </script>
 
