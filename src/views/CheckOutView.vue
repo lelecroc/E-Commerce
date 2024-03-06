@@ -100,16 +100,18 @@
             <h3>Your order</h3>
         </div>
         </div>
-
-        <div>
         <!-- STEP 4 / CHECKOUT COMPLETED -->
+        <div v-if="purchaseCompleted" class="flex flex-col items-center justify-center p-4">
+            <h2 class="text-lg font-bold my-2">Grazie per il tuo acquisto!</h2>
+            <p>Il tuo ordine è stato completato con successo.</p>
+            <router-link to="/" class="bg-green-500 text-white p-2 rounded-lg my-4">Torna alla Home</router-link>
         </div>
-
     </section>
 </template>
 
 
 
 <style>
+
 
 </style>
