@@ -1,15 +1,26 @@
-<script setup>
-const props = defineProps(["imgSrc", "imgAlt", "title", "price", "path", "spec", "tailClass"])
+<script>
+// const props = defineProps(["imgSrc", "imgAlt", "title", "price", "path", "spec", "tailClass"]);
+
+
+export default {
+    data() {
+        return {
+            prices: []
+        }
+    },
+    props: ["imgSrc", "imgAlt", "title", "price", "path", "spec", "divClass", "imgClass"
+    ]
+}
 </script>
 
 
 <template>
-    <div class="w-[300px] h-[420px] flex flex-col justify-center items-center shadow-xl rounded-lg">
+    <div class="w-[300px] h-[450px] flex flex-col justify-between items-center shadow-xl rounded-lg">
         <!-- Description -->
         <div class="w-full py-[10px] px-[20px] flex justify-between items-center">
             <div>
                 <RouterLink :to="path + spec">
-                    <h6 class="text-[24px] font-bold text-[#3B3232] mb-[-10px]">{{ title }}</h6>
+                    <h6 class="text-[24px] font-bold text-[#3B3232] mb-[10px] leading-[28px]">{{ title }}</h6>
                 </RouterLink>
                 <h6 class="text-[18px] font-medium text-[#3B3232]">{{ price }} €</h6>
             </div>
@@ -23,15 +34,15 @@ const props = defineProps(["imgSrc", "imgAlt", "title", "price", "path", "spec",
         </div>
 
         <!-- img -->
-        <div :class="tailClass">
-            <img :src="imgSrc" :alt="imgAlt">
+        <div :class="divClass">
+            <img class="object-contain" :class="imgClass" :src="imgSrc" :alt="imgAlt">
         </div>
 
 
 
 
         <!-- Cart container -->
-        <div class=" w-full px-[20px] mb-[30px] flex justify-between items-center text-[#fff]">
+        <div class="w-full pt-6 pb-4 px-[20px] flex justify-between items-center text-[#fff]">
             <!-- Cart -->
             <div
                 class="w-full flex justify-between items-center px-[30px] py-[8px] bg-gradient-to-r from-[#7AB4D6] to-[#CE88F0] shadow-xl rounded-xl ">
