@@ -25,6 +25,10 @@ After the "release" we will implement a "Vuekedex" page and another page where t
 
 We created our base project, our .json files, we decided on a structure to follow and we gave ourselves tasks to complete.
 
+### 05/03
+
+We created every view page necessary to this project. We updated the various cards and created a single reusable card that could fit our needs. We updated our .json to meet our needs, maily adding a key. We linked the items to a single detailed page of itself, that works for every item in the site.
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).

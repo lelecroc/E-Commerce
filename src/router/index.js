@@ -3,7 +3,9 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import NotFound from '../views/NotFound.vue'
 import CheckOutView from '../views/CheckOutView.vue'
-import SinglePage from '../views/SinglePage.vue'
+import SinglePeluchePage from '../views/SinglePeluchePage.vue'
+import SingleCardPage from '../views/SingleCardPage.vue'
+import SingleGamePage from '../views/SingleGamePage.vue'
 import ProductCard from '@/components/ProductCard.vue'
 
 const router = createRouter({
@@ -30,8 +32,16 @@ const router = createRouter({
       component: CheckOutView
     },
     {
+      path: "/game/:name",
+      component: SingleGamePage
+    },
+    {
       path: "/peluche/:name",
-      component: SinglePage
+      component: SinglePeluchePage
+    },
+    {
+      path: "/card/:name",
+      component: SingleCardPage
     }
   ]
 })

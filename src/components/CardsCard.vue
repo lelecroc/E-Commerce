@@ -16,7 +16,7 @@ export default {
 <ul class="overflow-x-auto h-[400px] flex pb-2 pt-5">
     <li v-for="card in cards" class="ml-5">
       <div class="w-[300px] flex flex-col justify-center items-center shadow-xl rounded-lg">
-        <!-- Description -->
+        <!-- DESCRIPTION -->
         <div class="w-full py-[10px] px-[20px] flex justify-between items-center">
           <div>
             <h6 class="text-[24px] font-bold text-[#3B3232] mb-[-10px]">{{ card.title }}</h6>
@@ -31,14 +31,14 @@ export default {
           </div>
         </div>
 
-        <!-- img -->
+        <!-- IMG -->
         <img :src="card.img" alt="Pika" class="w-[200px] rounded-lg">
 
 
 
-        <!-- Cart container -->
+        <!-- CARD CONTAINER -->
         <div class=" w-full px-[20px] mb-[30px] flex justify-between items-center text-[#fff]">
-          <!-- Cart -->
+          <!-- CARD -->
           <div
             class="w-full flex justify-between items-center px-[30px] py-[8px] bg-gradient-to-r from-[#7AB4D6] to-[#CE88F0] shadow-xl rounded-xl ">
             <button class="font-bold mr-[10px]"> Add to Cart</button>
