@@ -1,5 +1,14 @@
-<script setup>
-const props = defineProps(["imgSrc", "imgAlt", "title", "price", "path", "spec", "tailClass"])
+<script>
+export default {
+props: ["imgSrc", "imgAlt", "title", "price", "path", "spec", "tailClass"],
+data() {
+    return {
+      array: []
+    }
+}
+}
+
+
 </script>
 
 

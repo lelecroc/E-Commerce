@@ -14,10 +14,17 @@
             return {
                 products: ProductData,
                 games: ProductData.games,
-                bool: false
+                bool: false,
+                purchaseCompleted: false
             }
-        }
+        },
+
+        methods: {
+            completePurchase() {
+                this.purchaseCompleted = true;
+            }
     }
+}
 </script>
 
 
