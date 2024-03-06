@@ -21,7 +21,7 @@ export default {
     <p>Nuovi articoli in arrivo solo oggi 22/06/33</p>
   </div>
   <!-- HEADER -->
-  <header class="sticky top-0 ">
+  <header class="sticky top-0 mb-20">
     <!-- BANNER -->
 
     <nav class=" bg-[#fff] rounded-b-xl shadow-md">
