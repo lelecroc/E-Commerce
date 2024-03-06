@@ -52,20 +52,20 @@ export default {
   <!-- PALLE-CATEGORIE -->
   <div class="text-[#3b3b3b] flex justify-center items-center gap-7 mt-[80px] mb-[130px] max-[430px]:flex-col md:gap-12">
     <a href="#peluches">
-        <div class="rounded-full flex justify-center items-center bg-[#79C5EF] bg-opacity-60 h-[125px] w-[125px] hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-white hover:bg-[url('/src/assets/img/Gif/Peluche.gif')] hover:bg-cover md:w-[200px] md:h-[200px]">
+        <div class="rounded-full flex justify-center items-center bg-[#79C5EF] bg-opacity-60 h-[125px] w-[125px] hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-white hover:bg-[url('/src/assets/img/Gif/Peluche.gif')] hover:bg-cover md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">
           <span class="font-bold text-[20px]">Peluches</span>
         </div>
     </a>
     <a href="#cards">
       <div
-        class="rounded-full flex justify-center items-center bg-[#a1a0df] bg-opacity-60 h-[125px] w-[125px]  hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-white hover:bg-[url('/src/assets/img/Gif/CardGame.gif')] md:w-[200px] md:h-[200px]">
+        class="rounded-full flex justify-center items-center bg-[#a1a0df] bg-opacity-60 h-[125px] w-[125px]  hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-white hover:bg-[url('/src/assets/img/Gif/CardGame.gif')] hover:bg-cover md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">
         <span class="font-bold text-[20px]">Cards</span>
       </div>
     </a>
 
     <a href="#games">
       <div
-        class="rounded-full flex justify-center items-center bg-[#CE88F0] bg-opacity-60 h-[125px] w-[125px]  hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-white hover:bg-[url('/src/assets/img/Gif/GamesRetro.gif')] md:w-[200px] md:h-[200px]">
+        class="rounded-full flex justify-center items-center bg-[#CE88F0] bg-opacity-60 h-[125px] w-[125px]  hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-white hover:bg-[url('/src/assets/img/Gif/GamesRetro.gif')] hover:bg-cover md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">
         <span class="font-bold text-[20px]">Games</span>
       </div>
     </a>
