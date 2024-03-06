@@ -104,7 +104,7 @@
 
                 <!-- copyrights Vuekemon-->
 
-                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a
+                <span class="text-sm text-zinc-300 sm:text-center ">© 2024 <a
                         href="https://flowbite.com/" class="hover:underline">Vuekemon™</a>. All Rights Reserved.
                 </span>
 
@@ -114,7 +114,7 @@
                     
                     <!--Discord Logo & link-->
 
-                    <a href="https://github.com/ManuEmme" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                    <a href="https://github.com/ManuEmme" class="text-zinc-300 hover:text-gray-900 dark:hover:text-white ms-5">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 21 16">
                             <path
@@ -127,7 +127,7 @@
 
                     <!-- GitHub logo & link -->
 
-                    <a href="https://github.com/lelecroc" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                    <a href="https://github.com/lelecroc" class="text-zinc-300 hover:text-gray-900 dark:hover:text-white ms-5">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 20 20">
                             <path fill-rule="evenodd"

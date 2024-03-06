@@ -23,10 +23,10 @@ export default {
 
 <template>
   <!-- DJUMBO -->
-  <div class="flex">
+  <div class="flex flex-col">
     <!-- div img/3js -->
-    <div class="w-[50%] flex justify-center items-center text-[30px]">
-      IMMAGINONA
+    <div class=" w-[50%] md:flex  md:justify-center md:items-center md:text-[30px]">
+      <img src="/src/assets/Immaginona.png" alt="charmander">
     </div>
     <!-- div text -->
     <div class="w-[50%] flex flex-col justify-start ml-5">
