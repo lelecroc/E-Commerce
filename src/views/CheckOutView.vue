@@ -17,7 +17,28 @@ export default {
             products: ProductData,
             games: ProductData.games,
             bool: false,
-            purchaseCompleted: true
+            purchaseCompleted: true,
+            address: "",
+            num1: 0,
+            num2: 0,
+            num3: 0,
+            sum: 0
+        }
+    },
+    mounted() {
+
+        this.carlo();
+
+
+    },
+    methods: {
+        carlo() {
+            this.num1 = Math.floor(Math.random() * 9);
+            console.log(this.num1)
+            this.num2 = Math.floor(Math.random() * 9);
+            console.log(this.num2)
+            this.num3 = Math.floor(Math.random() * 9);
+            console.log(this.num3)
         }
     }
 }
@@ -34,15 +55,25 @@ export default {
         <!-- STEP 2 / FULL BASKET (AT LEAST 1 ITEM) -->
         <div class="max-w-[1000px] m-auto flex flex-row justify-evenly p-4">
             <div class="flex flex-col">
-                <!-- (COMPONENT) PRODUCT CARD  -->
-                <CardCheckOut class="mb-6" />
-                <CardCheckOut class="mb-6" />
-                <CardCheckOut class="mb-6" />
+                <ul>
+                    <li v-for="(items,i) in products.peluches">
+                        <CardCheckOut v-if="i === num1" class="mb-6" :title="items.title" :price="items.price" :imgSrc="items.img"
+                            path="peluche/" :spec="items.name" imgClass="w-[150px] h-[150px]"/>
+                    </li>
+                    <li v-for="(items,i) in products.games">
+                        <CardCheckOut v-if="i === num2" class="mb-6" :title="items.title" :price="items.price" :imgSrc="items.img"
+                            path="peluche/" :spec="items.name" imgClass="w-[150px] h-[150px]" />
+                    </li>
+                    <li v-for="(items,i) in products.cards">
+                        <CardCheckOut v-if="i === num3" class="mb-6" :title="items.title" :price="items.price" :imgSrc="items.img"
+                            path="peluche/" :spec="items.name" imgClass="w-[150px] h-[200px]" />
+                    </li>
+                </ul>
             </div>
 
 
             <!-- YOUR FAVOURITE STUFF -->
-            <div class="w-[300px] flex flex-col justify-center">
+            <div class="w-[300px] h-[450px] flex flex-col justify-between">
                 <h1 class=" font-bold text-[#3b3b3b] text-[30px]">Your favorite stuff</h1>
                 <p class="mb-[50px]"> Immerse yourself in a shopping experience tailored to your unique tastes and
                     preferences. </p>
@@ -50,7 +81,8 @@ export default {
                 <!-- CARD FOR YOUR FAVOURITE STUFF-->
                 <ul class="pb-2 pt-5">
                     <li v-for="(items, i) in products.games" class="ml-5 mb-3">
-                        <TemplateCard v-if="i<2" :title="items.title" :price="items.price" :imgSrc="items.img" path="game/" :spec="items.id" tailClass="w-[150px] h-[200px] rounded-lg"/>
+                        <TemplateCard v-if="i < 2" :title="items.title" :price="items.price" :imgSrc="items.img"
+                            path="game/" :spec="items.id" imgClass="w-[150px] h-[200px] rounded-lg" />
                     </li>
                 </ul>
             </div>
@@ -61,9 +93,9 @@ export default {
         <div class="flex flex-col rounded-lg shadow-lg p-6 bg-white">
             <h2 class="text-xl font-bold mb-4 text-black">Checkout</h2>
             <div class="mb-4">
-                <label for="indirizzoConsegna" class="block text-gray-700 text-sm font-bold mb-2">Indirizzo di
-                    consegna:</label>
-                <input type="text" id="indirizzoConsegna" name="indirizzoConsegna"
+                <!-- <label for="indirizzoConsegna" class="block text-gray-700 text-sm font-bold mb-2">Indirizzo di
+                    consegna:</label> -->
+                <input type="text" v-model="address"
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     placeholder="Inserisci il tuo indirizzo">
             </div>
@@ -77,43 +109,23 @@ export default {
                     <option>Bonifico bancario</option>
                 </select>
             </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2">Articoli:</label>
-                <div class="space-y-2">
-                    <!-- LISTA OGGETTI DINAMICA -->
-                    <!-- ESEMPIO ELEMENTO LISTA -->
-                    <div class="flex justify-between items-center">
-                        <span>Nome prodotto</span>
-                        <div>
-                            <select class="border py-1 px-2 text-gray-700">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                            <button class="bg-red-500 text-white py-1 px-2 rounded">x</button>
-                        </div>
+            <div>
+                <div class="text-gray-600">
+                    <div class="flex justify-between my-2">
+                        <p>Subtotale: </p>
+                        <span>€XXX,XX</span>
                     </div>
-                    <!-- FINE ESEMPIO ELEMENTO LISTA -->
+                    <div class="flex justify-between my-2">
+                        <span>Spedizione: {{ address }}</span>
+                        <span>€5,00</span>
+                    </div>
+                    <div class="flex justify-between my-2">
+                        <span>Totale:</span>
+                        <span>€YYY,YY</span>
+                    </div>
                 </div>
             </div>
-            <div class="text-gray-600">
-                <div class="flex justify-between my-2">
-                    <p>Subtotale: </p>
-                    <span>€XXX,XX</span>
-                </div>
-                <div class="flex justify-between my-2">
-                    <input type="text">
-                    <span>Spedizione:</span>
-                    <span>€X,XX</span>
-                </div>
-                <div class="flex justify-between my-2">
-                    <span>Totale:</span>
-                    <span>€YYY,YY</span>
-                </div>
-            </div>
+
             <div class="flex justify-between mt-4">
                 <button @click="completePurchase" class="bg-blue-500 text-white p-2 rounded-lg">Acquista ora</button>
                 <button class="bg-red-500 text-white p-2 rounded-lg">Annulla</button>

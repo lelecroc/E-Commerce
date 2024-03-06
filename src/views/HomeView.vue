@@ -71,7 +71,7 @@ export default {
       <div class="flex overflow-x-auto py-[50px]">
         <li class="ml-5" v-for="items in products.peluches">
           <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="peluche/" :spec="items.name"
-            tailClass="w-[150px] h-[200px] rounded-lg" />
+            imgClass="w-[150px] h-[200px] rounded-lg" />
         </li>
       </div>
       <a name="cards">
@@ -81,7 +81,7 @@ export default {
       <div class="flex overflow-x-auto py-[50px]">
         <li class="ml-5" v-for="items in products.cards">
           <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="card/" :spec="items.name"
-            tailClass="w-[150px] h-[200px] rounded-lg" />
+            imgClass="w-[150px] h-[200px] rounded-lg" />
         </li>
       </div>
       <a name="games">
@@ -91,7 +91,7 @@ export default {
       <div class="flex overflow-x-auto py-[50px]">
         <li class="ml-5" v-for="items in products.games">
           <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="game/" :spec="items.id"
-            tailClass="w-[150px] h-[200px] rounded-lg" />
+            imgClass="w-[150px] h-[200px] rounded-lg" />
         </li>
       </div>
     </ul>
