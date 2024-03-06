@@ -24,8 +24,7 @@ export default {
       <div class="flex p-[10px] justify-between items-center">
         <!-- LOGO -->
         <RouterLink to="/" class="text-[30px] font-extrabold"
-          >Vuekémon</RouterLink
-        >
+          >Vuekémon</RouterLink>
 
         <!-- lOGIN/SEARCH/CARRELLO -->
         <ul class="hidden p-[10px] md:flex">
@@ -85,7 +84,7 @@ export default {
           </li>
         </ul>
       </div>
-      <div v-show="showLogin" class="bg-slate-300/50 backdrop-blur-sm absolute top-0 right-0 left-0 bottom-0 flex justify-center items-center">
+      <div v-show="showLogin" class="bg-slate-300/50 backdrop-blur-sm absolute z-10 top-0 right-0 left-0 bottom-0 flex justify-center items-center">
         <button @click="showLoginFunc" class="flex justify-center items-center bg-white rounded-full w-[40px] h-[40px] text-center mx-4">X</button>
         <div class="flex justify-center items-center p-4 bg-white w-[50%] h-[50%] shadow-lg rounded-lg">
 
