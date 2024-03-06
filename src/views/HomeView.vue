@@ -31,7 +31,7 @@ export default {
     <!-- div text -->
     <div class="w-[400px] md:w-[300px] lg:w-[400px] border flex flex-col justify-center  md:justify-start md:ml-5">
       <h1 class=" font-extrabold text-desktop-xl lg:text-[50px] lg:leading-[55px] leading-[40px] mb-2">Welcome to our Vuekémon Store</h1>
-      <p class="font-semibold text-desktop-xs mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <p class="font-semibold text-desktop-xs mb-8 lg:text-[16px] text-[#686b6b]">Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Aspernatur
         consequuntur at expedita doloribus inventore accusantium veritatis earum blanditiis.</p>
 
