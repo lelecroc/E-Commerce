@@ -6,10 +6,17 @@ export default {
   data() {
     return {
       products: ProductData,
+      container: [],
     }
   },
   components: {
     TemplateCard
+  },
+  methods: {
+    addPelucheToCart() {
+      this.container.push("ciao")
+      console.log(this.container)
+    }
   }
 }
 </script>
