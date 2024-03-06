@@ -17,7 +17,7 @@
                     <RouterLink to="/">
                         <!-- LOGO PLACEHOLDER -->
                         <span
-                            class="text-[#fff] text-center  text-2xl font-semibold whitespace-nowrap">VUEKèMON</span>
+                            class="text-[#fff] text-center  text-2xl font-semibold whitespace-nowrap">Vuekèmon</span>
                     </RouterLink>
                 </div>
 

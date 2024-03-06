@@ -21,7 +21,7 @@ export default {
   <!-- HEADER -->
   <header >
     <!-- BANNER -->
-    <div class="h-[50px] bg-[#79c5ef] text-white font-bold items-center justify-center flex ">
+    <div class="h-[35px] bg-[#79c5ef] text-white font-bold items-center justify-center flex ">
     <p>Nuovi articoli in arrivo solo oggi 22/06/33</p>
   </div>
     <nav class=" px-[10px] bg-[#fff] rounded-b-xl shadow-md">
