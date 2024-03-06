@@ -1,11 +1,15 @@
 <script>
-// const props = defineProps(["imgSrc", "imgAlt", "title", "price", "path", "spec", "tailClass"]);
-
 
 export default {
     data() {
         return {
-            prices: []
+
+        }
+    },
+    methods: {
+
+        emitCounter() {
+            this.$emit("event")
         }
     },
     props: ["imgSrc", "imgAlt", "title", "price", "path", "spec", "divClass", "imgClass"
@@ -34,9 +38,11 @@ export default {
         </div>
 
         <!-- img -->
+        <RouterLink :to="path + spec">
         <div :class="divClass">
             <img class="object-contain" :class="imgClass" :src="imgSrc" :alt="imgAlt">
         </div>
+    </RouterLink>
 
 
 
@@ -44,8 +50,8 @@ export default {
         <!-- Cart container -->
         <div class="w-full pt-6 pb-4 px-[20px] flex justify-between items-center text-[#fff]">
             <!-- Cart -->
-            <div
-                class="w-full flex justify-between items-center px-[30px] py-[8px] bg-gradient-to-r from-[#7AB4D6] to-[#CE88F0] shadow-xl rounded-xl ">
+            <div @click="emitCounter"
+                class="cursor-pointer w-full flex justify-between items-center px-[30px] py-[8px] bg-gradient-to-r from-[#7AB4D6] to-[#CE88F0] shadow-xl rounded-xl ">
                 <button class="font-bold mr-[10px]"> Add to Cart</button>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff"
                     class="w-6 h-6">

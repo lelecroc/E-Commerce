@@ -3,42 +3,57 @@
 </script>
 
 
-
-
-
-
-
-
-
-
 <template>
 
-    <footer class="bg-[#73838b] mt-20">
-
-
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <footer class="bg-[#d1d0ef] mt-20 rounded-t-xl ">
+        <div class="mx-auto w-full max-w-screen-xl p-10 lg:p-12 ">
             <div class="md:flex md:justify-between">
 
                 <!-- FOOTER: nav-->
 
                 <!--div with: Logo Vuekèmon, link Home -->
 
-                <div class="mb-6 md:mb-0">
+                <div class="mb-10 mt-6 md:mb-0 flex justify-center">
                     <RouterLink to="/">
                         <!-- LOGO PLACEHOLDER -->
                         <span
-                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">VUEKEMON</span>
+                            class="text-[#fff] text-center  text-2xl font-semibold whitespace-nowrap">VUEKèMON</span>
                     </RouterLink>
                 </div>
 
-                <!-- Resources' grid-->
+                      <!--TEAM-->
+                      <div class="flex flex-col items-center mb-[60px]">
+                        <h2 class="mb-2 text-center text-[24px] font-bold text-[#fff] ">Team</h2>
+                        <ul class=" flex  border text-[#fff] text-[14px] ">
+                            <li class="mr-[20px]">
+                                <a href="https://github.com/lelecroc" class="hover:underline">Emanuele</a>
+                            </li>
+                            <li class="mr-[20px]">
+                                <a href="https://github.com/MartinaZanzani" class="hover:underline">Martina</a>
+                            </li>
 
-                <div class="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-3 sm:text-center">
+                            <li class="mr-[20px]">
+                                <a href="https://github.com/diseasedavide" class="hover:underline">Davide</a>
+                            </li>
+                            <li class="mr-[20px]">
+                                <a href="https://github.com/saraobia" class="hover:underline">Sara</a>
+                            </li>
+                            <li class="mr-[20px]">
+                                <a href="https://github.com/ManuEmme" class="hover:underline">Emanuel</a>
+                            </li>
+                            <li class="mr-[20px]">
+                                <a href="https://github.com/KyraelDev" class="hover:underline">Marcello</a>
+                            </li>
+                        </ul>
+                </div>
 
+                <!-- RESOURCES ECC -->
+
+                <div class="text-[#fff] flex justify-evenly  sm:text-center">
                     <div>
-                        <h2 class="mb-6 text-[18px] font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-                        <ul class="text-zinc-300 font-medium">
-                            <li class="mb-4">
+                        <h2 class="mb-2  text-[24px] font-bold text-[#fff] mr-[20px]">Resources</h2>
+                        <ul class="text-[#fff] font-medium mr-[20px]">
+                            <li class="mb-2">
                                 <a href="https://vuejs.org/" class="hover:underline">Vue.Js</a>
                             </li>
                             <li>
@@ -49,9 +64,9 @@
 
                     <!-- Follow us' grid -->
                     <div>
-                        <h2 class="mb-6 text-[18px] font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                        <ul class="text-zinc-300 font-medium">
-                            <li class="mb-4">
+                        <h2 class="mb-2  text-[24px] font-bold text-[#fff] ">Follow us</h2>
+                        <ul class="">
+                            <li class="mb-2 ">
                                 <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
                             </li>
                             <li>
@@ -59,41 +74,13 @@
                             </li>
                         </ul>
                     </div>
-
-                    <!--Legal's grid-->
-                    <div class="flex-row">
-                        <h2 class="mb-2 text-[18px] font-semibold text-gray-900 uppercase dark:text-white">Team</h2>
-                        <ul class="text-zinc-300  font-medium">
-    
-                            <li>
-                                <a href="https://github.com/lelecroc" class="hover:underline">Emanuele</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/MartinaZanzani" class="hover:underline">Martina</a>
-                            </li>
-
-                            <li>
-                                <a href="https://github.com/diseasedavide" class="hover:underline">Davide</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/saraobia" class="hover:underline">Sara</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/ManuEmme" class="hover:underline">Emanuel</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/KyraelDev" class="hover:underline">Marcello</a>
-                            </li>
-                        </ul>
-                    </div>
-
                 </div>
-            </div>
+
+        </div>
 
 
 
-
-            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <hr class="my-6 text-[#fff] sm:mx-auto lg:my-8" />
 
 
 
@@ -104,14 +91,14 @@
 
                 <!-- copyrights Vuekemon-->
 
-                <span class="text-sm text-zinc-300 sm:text-center ">© 2024 <a
+                <span class="text-sm text-[#fff] text-center ">&copy; 2024 <a
                         href="https://flowbite.com/" class="hover:underline">Vuekemon™</a>. All Rights Reserved.
                 </span>
 
 
                 <div class="flex mt-4 sm:justify-center sm:mt-0">
 
-                    
+
                     <!--Discord Logo & link-->
 
                     <a href="https://github.com/ManuEmme" class="text-zinc-300 hover:text-gray-900 dark:hover:text-white ms-5">
@@ -123,7 +110,7 @@
                         <span class="sr-only">Discord community</span>
                     </a>
 
-                   
+
 
                     <!-- GitHub logo & link -->
 
@@ -137,9 +124,9 @@
                         <span class="sr-only">GitHub account</span>
                     </a>
 
-                    
 
-                    
+
+
 
                 </div>
             </div>
