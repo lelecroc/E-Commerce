@@ -5,25 +5,41 @@ import GamesCard from '@/components/GamesCard.vue';
 import ProductData from "@/Jsons/products.json"
 import TemplateCard from "@/components/TemplateCard.vue"
 
-    export default {
-        components: {
-            CardCheckOut,
-            ProductCard,
-            GamesCard
-        },
-        data() {
-            return {
-                products: ProductData,
-                games: ProductData.games,
-                bool: false,
-                purchaseCompleted: false
-            }
-        },
+export default {
+    components: {
+        CardCheckOut,
+        ProductCard,
+        GamesCard,
+        TemplateCard
+    },
+    data() {
+        return {
+            products: ProductData,
+            games: ProductData.games,
+            bool: false,
+            purchaseCompleted: true,
+            address: "",
+            num1: 0,
+            num2: 0,
+            num3: 0,
+            sum: 0
+        }
+    },
+    mounted() {
 
-        methods: {
-            completePurchase() {
-                this.purchaseCompleted = true;
-            }
+        this.carlo();
+
+
+    },
+    methods: {
+        carlo() {
+            this.num1 = Math.floor(Math.random() * 9);
+            console.log(this.num1)
+            this.num2 = Math.floor(Math.random() * 9);
+            console.log(this.num2)
+            this.num3 = Math.floor(Math.random() * 9);
+            console.log(this.num3)
+        }
     }
 }
 </script>

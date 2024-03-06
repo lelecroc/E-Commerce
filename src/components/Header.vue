@@ -17,18 +17,18 @@ export default {
 </script>
 
 <template>
-  <div class="h-[50px] bg-[#79c5ef] text-white font-bold items-center justify-center flex ">
+
+  <!-- HEADER -->
+  <header >
+    <!-- BANNER -->
+    <div class="h-[50px] bg-[#79c5ef] text-white font-bold items-center justify-center flex ">
     <p>Nuovi articoli in arrivo solo oggi 22/06/33</p>
   </div>
-  <!-- HEADER -->
-  <header class="sticky top-0 mb-20">
-    <!-- BANNER -->
-
-    <nav class=" bg-[#fff] rounded-b-xl shadow-md">
+    <nav class=" px-[10px] bg-[#fff] rounded-b-xl shadow-md">
       <!-- DIV CONTAINER HEADER -->
       <div class="flex p-[10px] justify-between items-center">
         <!-- LOGO -->
-        <RouterLink to="/" class="text-[30px] font-extrabold">Vuekémon</RouterLink>
+        <RouterLink to="/" class="text-[30px] text-[#181818] font-extrabold">Vuekémon</RouterLink>
 
         <!-- lOGIN/SEARCH/CARRELLO -->
         <ul class="flex p-[10px]">
