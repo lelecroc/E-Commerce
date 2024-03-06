@@ -9,44 +9,53 @@ export default {
 
 
     }
-  }
+  },
+  props: ["imgSrc", "imgAlt", "title", "price", "path", "spec", "divClass", "imgClass"
+  ]
 }
 </script>
 
 <template>
-    <ul v-for="(peluche, i) in peluches">
-      <li v-if="i === 0" class="shadow-xl rounded-lg">
-        <!-- CARD CONTAINER -->
-        <div class="flex items-center w-[500px] h-[300px] relative">
-          <img :src="peluche.img">
-          <!-- DESCRIPTION -->
-          <div>
-            <h6 class="text-[18px] font-medium text-[#3B3232]">${{ peluche.price }}</h6>
-            <h2 class="mb-[5px] text-[20px] font-bold">{{ peluche.title }}</h2>
-            <p  class="mb-[15px]">{{ peluche.description }}</p>
+  <div class="w-[300px] h-[450px] flex flex-col justify-between items-center shadow-xl rounded-lg">
+    <!-- Description -->
+    <div class="w-full py-[10px] px-[20px] flex justify-between items-center">
+      <div>
+        <RouterLink :to="path + spec">
+          <h6 class="text-[24px] font-bold text-[#3B3232] mb-[10px]">{{ title }}</h6>
+        </RouterLink>
+        <h6 class="text-[18px] font-medium text-[#3B3232]">{{ price }} €</h6>
+      </div>
+      <div class="p-[10px] bg-[#d1d1d1] rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-6 h-6">
+          <path
+            d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+        </svg>
 
-          <!-- DIV CONTAINER FOR ADD AND REMOVE FUNCTION -->
-          <div class="flex items-center">
-            <!-- HERO ICONS (ADD) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=" #3b3b3b" class="w-8 h-8">
-              <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
-            </svg>
+      </div>
+    </div>
 
-            <!-- HERO ICONS (MINUS) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=" #3b3b3b" class=" w-8 h-8 mr-4 opacity-70">
-              <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm3 10.5a.75.75 0 0 0 0-1.5H9a.75.75 0 0 0 0 1.5h6Z" clip-rule="evenodd" />
-            </svg>
+    <!-- img -->
+    <div :class="divClass">
+      <img class="object-contain" :class="imgClass" :src="imgSrc" :alt="imgAlt">
+    </div>
 
-            <p class=" text-[#3b3b3b] font-semibold">Q.ta: <span>3</span></p>
-          </div>
 
-          <!-- TRASH ICON -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="absolute z-0  bottom-6 right-6 w-6 h-6">
-            <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 0 1 3.878.512.75.75 0 1 1-.256 1.478l-.209-.035-1.005 13.07a3 3 0 0 1-2.991 2.77H8.084a3 3 0 0 1-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 0 1-.256-1.478A48.567 48.567 0 0 1 7.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 0 1 3.369 0c1.603.051 2.815 1.387 2.815 2.951Zm-6.136-1.452a51.196 51.196 0 0 1 3.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 0 0-6 0v-.113c0-.794.609-1.428 1.364-1.452Zm-.355 5.945a.75.75 0 1 0-1.5.058l.347 9a.75.75 0 1 0 1.499-.058l-.346-9Zm5.48.058a.75.75 0 1 0-1.498-.058l-.347 9a.75.75 0 0 0 1.5.058l.345-9Z" clip-rule="evenodd" />
-          </svg>
-          </div>
-        </div>
-      </li>
-  </ul>
+
+
+    <!-- Cart container -->
+    <div class=" w-full pt-6 pb-4 px-[20px] flex justify-between items-baseline text-[#fff]">
+      <!-- Cart -->
+      <div
+        class="w-full flex justify-between items-center px-[30px] py-[8px] bg-gradient-to-r from-[#7AB4D6] to-[#CE88F0] shadow-xl rounded-xl ">
+        <button class="font-bold mr-[10px]"> Add to Cart</button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+        </svg>
+      </div>
+
+
+    </div>
+  </div>
 </template>
-
