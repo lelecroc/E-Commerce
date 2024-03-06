@@ -52,19 +52,19 @@ export default {
       <h2 class="font-extrabold text-[35px] ml-5">Peluches</h2>
       <div class="flex overflow-x-auto">
         <li class="ml-5" v-for="items in products.peluches">
-          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="peluche/" :spec="items.name" />
+          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="peluche/" :spec="items.name" tailClass="w-[150px] h-[200px] rounded-lg"/>
         </li>
       </div>
       <h2 class="font-extrabold text-[35px] ml-5 mt-[90px]">Cards</h2>
       <div class="flex overflow-x-auto">
         <li class="ml-5" v-for="items in products.cards">
-          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="card/" :spec="items.name"/>
+          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="card/" :spec="items.name" tailClass="w-[150px] h-[200px] rounded-lg"/>
         </li>
       </div>
       <h2 class="font-extrabold text-[35px] ml-5 mt-[90px]">Games</h2>
       <div class="flex overflow-x-auto">
         <li class="ml-5" v-for="items in products.games">
-          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="game/" :spec="items.id"/>
+          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="game/" :spec="items.id" tailClass="w-[150px] h-[200px] rounded-lg"/>
         </li>
       </div>
     </ul>

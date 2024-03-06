@@ -1,6 +1,5 @@
-
 <script setup>
-const props = defineProps(["imgSrc", "imgAlt", "title", "price", "path", "spec"])
+const props = defineProps(["imgSrc", "imgAlt", "title", "price", "path", "spec", "tailClass"])
 </script>
 
 
@@ -9,7 +8,7 @@ const props = defineProps(["imgSrc", "imgAlt", "title", "price", "path", "spec"]
         <!-- Description -->
         <div class="w-full py-[10px] px-[20px] flex justify-between items-center">
             <div>
-                <RouterLink :to="path + spec ">
+                <RouterLink :to="path + spec">
                     <h6 class="text-[24px] font-bold text-[#3B3232] mb-[-10px]">{{ title }}</h6>
                 </RouterLink>
                 <h6 class="text-[18px] font-medium text-[#3B3232]">{{ price }} €</h6>
@@ -24,7 +23,7 @@ const props = defineProps(["imgSrc", "imgAlt", "title", "price", "path", "spec"]
         </div>
 
         <!-- img -->
-        <div class="w-[150px] h-[200px] rounded-lg">
+        <div :class="tailClass">
             <img :src="imgSrc" :alt="imgAlt">
         </div>
 
