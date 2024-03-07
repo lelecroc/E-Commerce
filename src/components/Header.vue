@@ -1,19 +1,46 @@
 <script>
-import userData from "@/Jsons/products.json";
+import TestData from "@/Jsons/test.json"
 
 export default {
   data() {
     return {
-      users: userData,
       showLogin: false,
+      checkOk: false,
+      testlist: TestData,
+      accountName: "",
+      loginError: false
     };
   },
   methods: {
     showLoginFunc() {
       this.showLogin = !this.showLogin
+    },
+    checkOver() {
+      this.checkOk = !this.checkOk
+    },
+    callError() {
+      this.loginError = !this.loginError
+    },
+    checkLogin() {
+      for (let i = 0; i < TestData.users.length; i++) {
+        if (TestData.users[i].user == userInput.value && TestData.users[i].password == passInput.value) {
+          console.log("ciao")
+          this.checkOver()
+          this.showLoginFunc()
+          break
+        } else {
+          this.callError()
+          break
+        }
+
+      }
+
+    },
+    refreshPage() {
+      location.reload()
     }
   }
-};
+}
 </script>
 
 <template>
@@ -34,7 +61,10 @@ export default {
 
         <!-- lOGIN/SEARCH/CARRELLO -->
         <ul class="flex justify-center mt-[5px] p-[10px]">
-          <li>
+          <li class="flex">
+            <div v-show="checkOk" class="mr-4">
+              <p class="font-sans">Bentornato, <span class="font-bold">{{ accountName }}</span></p>
+            </div>
             <button name="login" @click="showLoginFunc">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
@@ -66,10 +96,12 @@ export default {
           <div class="flex gap-4">
             <div class="flex flex-col justify-center items-center">
               <div class="mb-7">
-                <p class="font-bold">Username</p><input type="text" placeholder="Username.." class="border-2 rounded-lg">
+                <p class="font-bold">Username</p><input type="text" placeholder="Username.."
+                  class="border-2 rounded-lg py-1 px-2" id="userInput" v-model="accountName">
               </div>
               <div>
-                <p class="font-bold">Password</p><input type="text" placeholder="Password.." class="border-2 rounded-lg">
+                <p class="font-bold">Password</p><input type="password" placeholder="Password.."
+                  class="border-2 rounded-lg py-1 px-2" id="passInput">
               </div>
             </div>
             <div class="flex justify-center items-center md:flex md:justify-center md:items-center">
@@ -77,7 +109,13 @@ export default {
             </div>
           </div>
           <div class="mt-10">
-            <button @click="showLoginFunc" class="mr-[10px] focus:outline-none rounded-xl border-2 border-fuschia font-semibold text-gray-p py-[10px] px-[20px] shadow-xl">Login</button>
+            <button @click="checkLogin"
+              class="mr-[10px] focus:outline-none rounded-xl border-2 border-fuschia font-semibold text-gray-p py-[10px] px-[20px] shadow-xl">Login</button>
+            <button @click="refreshPage" v-show="checkOk"
+              class="ml-[10px] focus:outline-none rounded-xl border-2 border-fuschia bg-fuschia font-semibold text-white py-[10px] px-[20px] shadow-xl">Logout</button>
+          </div>
+          <div v-show="loginError">
+            <p class="text-red-600 mt-10">Wrong username and/or password</p>
           </div>
         </div>
       </div>
