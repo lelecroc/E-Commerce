@@ -22,34 +22,29 @@ export default {
     callError() {
       this.loginError = !this.loginError
       this.imgLogin = !this.imgLogin
-      userInput.value= "";
-      passInput.value= "";
+      userInput.value = "";
+      passInput.value = "";
       setTimeout(() => {
         this.loginError = !this.loginError
         this.imgLogin = !this.imgLogin
       }, 5000);
     },
     checkLogin() {
-      for (let i = 0; i < usersData.users.length; i++) {
-        if (usersData.users[i].user == userInput.value && usersData.users[i].password == passInput.value) {
-          console.log("ciao")
-          this.checkOver()
-          this.showLoginFunc()
-          break
-        } else {
-          this.callError()
-          this.imgChangeLogin()
-          break
-        }
-
+      const user = usersData.users.some(user => user.user === userInput.value && user.password === passInput.value)
+      if (user) {
+        this.checkOver()
+        this.showLoginFunc()
+      } else {
+        this.callError();
       }
-
     },
     refreshPage() {
-      location.reload()
+      window.location.reload()
     }
   }
+
 }
+
 </script>
 
 <template>
@@ -114,8 +109,10 @@ export default {
               </div>
             </div>
             <div class="flex justify-center items-center md:flex md:justify-center md:items-center">
-              <img v-show="imgLogin" src="/src/assets/img/loginbase.png" alt="charmander" class="h-[100px] md:h-[150px] lg:h-[200px]">
-              <img v-show="!imgLogin" src="/src/assets/img/pokemonerror.png" alt="charmander" class="h-[100px] md:h-[150px] lg:h-[200px]">
+              <img v-show="imgLogin" src="/src/assets/img/loginbase.png" alt="charmander"
+                class="h-[100px] md:h-[150px] lg:h-[200px]">
+              <img v-show="!imgLogin" src="/src/assets/img/pokemonerror.png" alt="charmander"
+                class="h-[100px] md:h-[150px] lg:h-[200px]">
             </div>
           </div>
           <div class="mt-10">
