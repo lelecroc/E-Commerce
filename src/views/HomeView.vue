@@ -23,9 +23,14 @@ export default {
         },
   }
 }
-</script>
 
+
+
+
+</script>
 <template>
+
+
 
 <!-- CART NOTIFICATION -->
 <div v-show="counter > 0" class="h-[25px] w-[25px] rounded-full bg-violet opacity-75 absolute top-[45px] right-[10px]"></div>
@@ -81,6 +86,8 @@ export default {
   <!-- E-COMMERCE SECTION -->
   <main>
     <ul>
+      <!-- PELUCHES -->
+      <div  data-aos="fade-up" data-aos-duration="500" >
       <a name="peluches">
         <h2 class="font-extrabold font-serif text-dark-gray text-center text-[35px] mb-[50px] ml-5">Peluches</h2>
       </a>
@@ -91,10 +98,14 @@ export default {
             imgClass="w-[150px] h-[150px] rounded-lg" />
         </li>
       </div>
-      <a name="cards">
+      </div>
+
+
+      <!-- CARD -->
+      <div data-aos="fade-up" data-aos-duration="500" >
+        <a name="cards">
         <h2 class="text-dark-gray font-serif text-center font-extrabold text-[35px] ml-5 mt-[90px] mb-[50px] ">Cards</h2>
       </a>
-
       <div class="flex overflow-x-auto pb-[50px]">
         <li class="ml-5" v-for="items in products.cards">
           <!-- CARDS -->
@@ -102,10 +113,14 @@ export default {
             imgClass="w-[150px] h-[150px] rounded-lg" />
         </li>
       </div>
-      <a name="games">
+      </div>
+
+      <!-- GAMES -->
+      <div data-aos="fade-up" data-aos-duration="500">
+      <a name="games" >
         <h2 class="text-dark-gray font-serif text-center font-extrabold text-[35px] ml-5 mt-[90px] mb-[50px]">Games</h2>
       </a>
-
+      <!-- CARD -->
       <div class="flex overflow-x-auto pb-[50px]">
         <li class="ml-5" v-for="items in products.games">
           <!-- GAME -->
@@ -113,26 +128,35 @@ export default {
             imgClass=" w-[150px] h-[150px] rounded-lg" />
         </li>
       </div>
+    </div>
+
+
     </ul>
   </main>
 
-       <!--TEAM-->
-       <div class="flex flex-col justify-center items-center mb-[60px] mt-[100px] ">
-                        <h2 class="mb-6 font-serif text-center text-[24px] text-dark-gray font-semibold  ">Our beautiful Team</h2>
-                        <ul class=" flex flex-wrap  justify-center text-dark-gray text-[14px]  ">
-                            <!-- EMA -->
-                            <li class="mx-[15px] flex flex-col justify-center items-center text-center -2">
-                                <a href="https://github.com/lelecroc">
-                                  <div class="flex flex-col justify-center items-center ">
-                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
-                                    <font-awesome-icon icon="fish" class="text-[27px] text-icon-gray" />
-                                </div>
-                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Emanuele</div></div></a>
 
-                            </li>
 
-                            <!-- MARTI -->
-                            <li class="mx-[15px] flex flex-col items-center justify-center text-center">
+  <!--TEAM-->
+  <section class="flex flex-col justify-center items-center mb-[60px] mt-[100px]">
+      <h2 class="mb-6 font-serif text-center text-[24px] text-dark-gray font-semibold  ">Our beautiful Team</h2>
+          <ul class=" flex flex-wrap  justify-center text-dark-gray text-[14px]  ">
+              <!-- EMA -->
+              <div data-aos="fade-out" data-aos-duration="1000">
+                <li class=" mx-[15px] flex flex-col justify-center items-center text-center -2">
+                  <a href="https://github.com/lelecroc">
+                  <div class="flex flex-col justify-center items-center ">
+                     <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                         <font-awesome-icon icon="fish" class="text-[27px] text-icon-gray" />
+                      </div>
+                    <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Emanuele</div>
+                  </div>
+                  </a>
+                </li>
+              </div>
+
+                <!-- MARTI -->
+              <div data-aos="fade-out" data-aos-duration="1000">
+              <li class="mx-[15px] flex flex-col items-center justify-center text-center">
                                 <a href="https://github.com/MartinaZanzani" >
                                 <div class="flex flex-col justify-center items-center ">
                                 <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
@@ -140,17 +164,23 @@ export default {
                                 <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Martina</div>
                               </div>
                             </a>
-                            </li>
-                            <!-- CAPITANO -->
-                            <li class="mx-[15px] flex flex-col text-center">
-                                <a href="https://github.com/diseasedavide" >
-                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
-                                <font-awesome-icon icon="otter" class="text-[27px] text-icon-gray" /></div>
-                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Davide</div>
+              </li>
+              </div>
+
+              <!-- CAPITANO -->
+              <div data-aos="fade-out" data-aos-duration="1000">
+              <li class="mx-[15px] flex flex-col text-center">
+                  <a href="https://github.com/diseasedavide" >
+                  <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                  <font-awesome-icon icon="otter" class="text-[27px] text-icon-gray" /></div>
+                   <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Davide</div>
                                 </a>
-                            </li>
-                            <!-- SARA -->
-                            <li class="mx-[15px] flex flex-col text-center">
+              </li>
+              </div>
+
+              <!-- SARA -->
+              <div data-aos="fade-out" data-aos-duration="1000">
+              <li class="mx-[15px] flex flex-col text-center">
                                 <a href="https://github.com/saraobia" >
                                 <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
                                 <font-awesome-icon icon="dragon" class="text-[27px] text-icon-gray" /> </div>
@@ -158,23 +188,31 @@ export default {
 
 
                               </a>
-                            </li>
-                            <!-- EMANUEL -->
-                            <li class="mx-[15px] flex flex-col text-center">
+              </li>
+              </div>
+
+              <!-- EMANUEL -->
+              <div data-aos="fade-out" data-aos-duration="1000">
+              <li class="mx-[15px] flex flex-col text-center">
                                 <a href="https://github.com/ManuEmme" >
                                 <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
                                 <font-awesome-icon icon="spider" class="text-[27px] text-icon-gray" /></div>
                                 <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Emanuel</div>
                                 </a>
-                            </li>
-                            <!-- MARCE -->
-                            <li class="mx-[15px] flex flex-col text-center">
+              </li>
+              </div>
+
+              <!-- MARCE -->
+              <div data-aos="fade-out" data-aos-duration="1000">
+              <li class="mx-[15px] flex flex-col text-center">
                                 <a href="https://github.com/KyraelDev" >
                                 <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
                                 <font-awesome-icon icon="crow" class="text-[27px] text-icon-gray" /></div>
                                 <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Marcello</div>
                               </a>
-                            </li>
-                        </ul>
-                </div>
+              </li>
+              </div>
+            </ul>
+
+  </section>
 </template>
