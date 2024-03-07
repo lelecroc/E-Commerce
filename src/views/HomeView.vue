@@ -64,7 +64,7 @@ export default {
     <!-- CARDS -->
     <a href="#cards">
       <div
-        class="rounded-full flex justify-center items-center bg-violet bg-opacity-60 h-[125px] w-[125px]  hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-icon-gray hover:bg-[url('/src/assets/img/Gif/CardGame.gif')] md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">
+        class="rounded-full flex justify-center items-center bg-violet bg-opacity-60 h-[125px] w-[125px] bg-no-repeat bg-cover hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-icon-gray hover:bg-[url('/src/assets/img/Gif/CardGame.gif')] md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">
         <span class="flex items-center justify-center rounded-full h-[125px] w-[125px] md:h-[170px] md:w-[170px] lg:w-[220px] lg:h-[220px] hover:bg-[rgba(0,0,0,0.4)] ">Cards</span>
       </div>
     </a>
