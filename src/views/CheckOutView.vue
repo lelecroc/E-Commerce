@@ -71,7 +71,7 @@ export default {
         <div v-show="bool">Il tuo carrello è vuoto.</div>
         <!-- STEP 2 / FULL BASKET (AT LEAST 1 ITEM) -->
         <div
-            class="border h-[2500px] items-center md:items-start flex flex-col md:flex-row md:justify-center md:gap-60 my-[80px] md:h-[1400px]">
+            class="h-[2500px] items-center md:items-start flex flex-col md:flex-row md:justify-center md:gap-60 my-[80px] md:h-[1400px]">
             <div class="flex flex-col">
                 <ul>
                     <div v-show="show1">
@@ -101,7 +101,7 @@ export default {
 
 
             <!-- YOUR FAVOURITE STUFF -->
-            <div class="border w-[300px] flex flex-col justify-between  text-center">
+            <div class="w-[300px] flex flex-col justify-between  text-center">
                 <h1 class=" font-bold text-[#3b3b3b] text-[30px] font-serif">Your favorite stuff</h1>
                 <p class="mb-[50px]"> Immerse yourself in a shopping experience tailored to your unique tastes and
                     preferences. </p>
