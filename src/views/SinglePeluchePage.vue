@@ -16,7 +16,7 @@ export default {
     },
     updated(){
         console.log(this.$route.params.name);
-        
+
     },
     methods: {
 
@@ -32,7 +32,7 @@ export default {
         //     })
         //     console.log(this.dataContainer)
         // }
-            
+
     }
 }
 
@@ -71,6 +71,7 @@ export default {
         </div>
     </div>
     <!-- POKEDEX -->
+    <!-- to do tenere? -->
     <div>
         <button @click="getPokemon">Clicca</button>
     </div>
