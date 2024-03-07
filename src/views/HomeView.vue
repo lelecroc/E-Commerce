@@ -38,7 +38,7 @@ export default {
   <section class="bg-gradient-[45deg] mt-[50px] md:mt-[100px] from-fuschia to-light-blue flex flex-col justify-center items-center md:flex md:flex-row md:px-[50px]">
     <!-- IMG -->
     <div class="flex justify-center items-center md:flex md:justify-center md:items-center">
-      <img src="/src/assets/Immaginona.png" alt="charmander" class="h-[300px] md:h-[350px] lg:h-[500px]">
+      <img src="/src/assets/img/jumbo.png" alt="charmander" class="h-[300px] md:h-[350px] lg:h-[500px]">
     </div>
     <!-- div text -->
     <div class="text-center w-[350px] md:w-[300px] md:text-left lg:w-[400px] flex flex-col justify-center  md:justify-start md:ml-5 ">
@@ -80,7 +80,7 @@ export default {
 
 
   <!-- E-COMMERCE SECTION -->
-  <section>
+  <main>
     <ul>
       <a name="peluches">
         <h2 class="font-extrabold font-serif text-dark-gray text-center text-[35px] mb-[50px] ml-5">Peluches</h2>
@@ -115,5 +115,67 @@ export default {
         </li>
       </div>
     </ul>
-  </section>
+  </main>
+
+       <!--TEAM-->
+       <div class="flex flex-col justify-center items-center mb-[60px] mt-[100px] ">
+                        <h2 class="mb-6 font-serif text-center text-[24px] text-dark-gray font-semibold  ">Our beautiful Team</h2>
+                        <ul class=" flex flex-wrap  justify-center text-dark-gray text-[14px]  ">
+                            <!-- EMA -->
+                            <li class="mx-[15px] flex flex-col justify-center items-center text-center -2">
+                                <a href="https://github.com/lelecroc">
+                                  <div class="flex flex-col justify-center items-center ">
+                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                                    <font-awesome-icon icon="fish" class="text-[27px] text-icon-gray" />
+                                </div>
+                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Emanuele</div></div></a>
+
+                            </li>
+
+                            <!-- MARTI -->
+                            <li class="mx-[15px] flex flex-col items-center justify-center text-center">
+                                <a href="https://github.com/MartinaZanzani" >
+                                <div class="flex flex-col justify-center items-center ">
+                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                                <font-awesome-icon icon="hippo" class="text-[27px] text-icon-gray"/> </div >
+                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Martina</div>
+                              </div>
+                            </a>
+                            </li>
+                            <!-- CAPITANO -->
+                            <li class="mx-[15px] flex flex-col text-center">
+                                <a href="https://github.com/diseasedavide" >
+                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                                <font-awesome-icon icon="otter" class="text-[27px] text-icon-gray" /></div>
+                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Davide</div>
+                                </a>
+                            </li>
+                            <!-- SARA -->
+                            <li class="mx-[15px] flex flex-col text-center">
+                                <a href="https://github.com/saraobia" >
+                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                                <font-awesome-icon icon="dragon" class="text-[27px] text-icon-gray" /> </div>
+                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Sara</div>
+
+
+                              </a>
+                            </li>
+                            <!-- EMANUEL -->
+                            <li class="mx-[15px] flex flex-col text-center">
+                                <a href="https://github.com/ManuEmme" >
+                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                                <font-awesome-icon icon="spider" class="text-[27px] text-icon-gray" /></div>
+                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Emanuel</div>
+                                </a>
+                            </li>
+                            <!-- MARCE -->
+                            <li class="mx-[15px] flex flex-col text-center">
+                                <a href="https://github.com/KyraelDev" >
+                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                                <font-awesome-icon icon="crow" class="text-[27px] text-icon-gray" /></div>
+                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Marcello</div>
+                              </a>
+                            </li>
+                        </ul>
+                </div>
 </template>

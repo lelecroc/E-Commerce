@@ -23,6 +23,7 @@ export default {
         'light-blue': '#79C5EF',
         'violet' : '#a1a0df',
         'fuschia' : '#CE88F0',
+        'fake-white' : '#f9f9f9',
         'icon-gray' : '#d1d8e0',
         'gray-p' : '#686b6b',
         'dark-gray': '#3b3b3b'
