@@ -1,5 +1,5 @@
 {
-    "peluches": [
+    "peluches": [        
         {
             "id": 0,
             "name": "Pikachu",
@@ -113,8 +113,8 @@
         },
         {
             "id": 1,
-            "name": "MCharizzardEX",
-            "title": "MCharizzard EX",
+            "name": "MCharizardEX",
+            "title": "MCharizard EX",
             "price": 30.99,
             "description": "A single individual card from the Pokemon Trading and Collectible Card Game (TCG/CCG).",
             "img": "./src/Jsons/images/cards/charizardcard.png",
