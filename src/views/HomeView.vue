@@ -46,9 +46,9 @@ export default {
       <p class="font-medium text-desktop-xs mb-8 lg:text-[16px] text-gray-p">Welcome to our Vuekèmon Emporium, where adventure awaits at every corner! Immerse yourself in a world of wonder as you explore shelves adorned with a vibrant array of Vuekèmon merchandise. </p>
 
      <div class=" flex items-center justify-center lg:justify-start">
-        <button  class="mr-[10px] focus:outline-none rounded-xl border-2 border-fuschia font-semibold text-gray-p py-[10px] px-[20px] shadow-xl">About project</button>
+        <button  class="mr-[10px] focus:outline-none rounded-xl border-2 border-fuschia font-semibold text-gray-p py-[10px] px-[20px] shadow-xl hover:scale-[1.1]"> <a href="https://github.com/lelecroc/E-Commerce/blob/main/README.md"> About project </a></button>
 
-        <button class="ml-[10px] focus:outline-none rounded-xl border-2 border-fuschia bg-fuschia font-semibold text-white py-[10px] px-[20px] shadow-xl">Get started</button>
+        <button class="ml-[10px] focus:outline-none rounded-xl border-2 border-fuschia bg-fuschia font-semibold text-white py-[10px] px-[20px] shadow-xl hover:scale-[1.1]"> <a href="https://vuejs.org/"> Get started </a></button>
       </div>
     </div>
   </section>
