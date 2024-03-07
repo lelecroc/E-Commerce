@@ -10,7 +10,7 @@ export default {
             peluches: ProductData.peluches,
             pokemonName: this.$route.params.name.toLowerCase(),
             dataContainer: [],
-            nascondi: false
+            show: false
         }
     },
     beforeMount() {
@@ -32,13 +32,11 @@ export default {
                 })
             console.log(this.dataContainer)
             console.log(this.dataContainer.id)
-            this.nascondi = !this.nascondi
         }
 
     },
-    updated() {
-        this.pokemonName = this.$route.params.name.toLowerCase()
-        console.log(this.pokemonName)
+    beforeUpdate() {
+        this.show = !this.show
     }
 }
 
@@ -79,7 +77,7 @@ export default {
     <!-- POKEDEX -->
     <section class="mb-10">
         <button @click="getPokemon">clic</button>
-        <div v-show="nascondi">
+        <div v-show="show">
             <p>{{ this.dataContainer.name }}</p>
             <img :src="this.dataContainer.sprites.other.showdown.front_default" alt="">
         </div>
