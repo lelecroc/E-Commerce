@@ -19,16 +19,17 @@ export default {
 <template>
 
   <!-- HEADER -->
-  <header >
+  <header>
     <!-- BANNER -->
     <div class="h-[35px] bg-[#79c5ef] text-white font-bold items-center justify-center flex ">
-    <p>Nuovi articoli in arrivo solo oggi 22/06/33</p>
-  </div>
+      <p>Nuovi articoli in arrivo solo oggi 22/06/33</p>
+    </div>
     <nav class=" px-[10px] bg-[#fff] rounded-b-xl shadow-md">
       <!-- DIV CONTAINER HEADER -->
       <div class="flex py-[14px] p-[10px] justify-between items-center">
         <!-- LOGO -->
-        <RouterLink to="/" class="text-[30px] text-[#181818] font-extrabold"><img src="/src/assets/logo.svg" alt="logo" class="h-[40px] md:h-[44px] lg:h-[48px]">
+        <RouterLink to="/" class="text-[30px] text-[#181818] font-extrabold"><img src="/src/assets/logo.svg" alt="logo"
+            class="h-[40px] md:h-[44px] lg:h-[48px]">
         </RouterLink>
 
         <!-- lOGIN/SEARCH/CARRELLO -->
@@ -58,9 +59,26 @@ export default {
         class="bg-slate-300/50 backdrop-blur-sm absolute z-10 top-0 right-0 left-0 bottom-0 flex justify-center items-center">
         <button @click="showLoginFunc"
           class="flex justify-center items-center bg-white rounded-full w-[40px] h-[40px] text-center mx-4">X</button>
-        <div class="flex justify-center items-center p-4 bg-white w-[50%] h-[50%] shadow-lg rounded-lg">
-
-          <h1 class="text-black">DAJE CON STO FORM</h1>
+        <div class="flex flex-col justify-center items-center p-4 bg-white shadow-lg rounded-lg h-[60%] w-[50%]">
+          <div class="mb-10">
+            <img src="/src/assets/logo.svg" alt="logo" class="h-[40px] md:h-[44px] lg:h-[48px]">
+          </div>
+          <div class="flex gap-4">
+            <div class="flex flex-col justify-center items-center">
+              <div class="mb-7">
+                <p class="font-bold">Username</p><input type="text" placeholder="Username.." class="border-2 rounded-lg">
+              </div>
+              <div>
+                <p class="font-bold">Password</p><input type="text" placeholder="Password.." class="border-2 rounded-lg">
+              </div>
+            </div>
+            <div class="flex justify-center items-center md:flex md:justify-center md:items-center">
+              <img src="/src/assets/img/jumbo.png" alt="charmander" class="h-[100px] md:h-[150px] lg:h-[200px]">
+            </div>
+          </div>
+          <div class="mt-10">
+            <button @click="showLoginFunc" class="mr-[10px] focus:outline-none rounded-xl border-2 border-fuschia font-semibold text-gray-p py-[10px] px-[20px] shadow-xl">Login</button>
+          </div>
         </div>
       </div>
     </nav>
