@@ -31,7 +31,7 @@ export default {
                 <div class="flex items-center">
                     <p class="text-desktop-xl font-bold mr-6">Price: {{ card.price }} €</p>
                     <div
-                        class="w-[30%]  flex justify-between items-center px-[30px] py-[8px] bg-gradient-to-r from-[#7AB4D6] to-[#CE88F0] shadow-xl rounded-xl ">
+                        class="w-[30%] flex justify-between items-center px-[30px] py-[8px] bg-gradient-to-r from-[#7AB4D6] to-[#CE88F0] shadow-xl rounded-xl ">
                         <button class="font-bold mr-[10px] text-white"> Add to Cart</button>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="#fff" class="w-6 h-6">
