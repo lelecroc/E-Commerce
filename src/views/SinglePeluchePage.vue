@@ -1,5 +1,6 @@
 <script>
 import ProductData from "@/Jsons/products.json"
+import { info } from "autoprefixer";
 import axios from "axios"
 
 export default {
@@ -8,31 +9,36 @@ export default {
             products: ProductData,
             peluches: ProductData.peluches,
             pokemonName: this.$route.params.name.toLowerCase(),
-            dataContainer: []
+            dataContainer: [],
+            nascondi: false
         }
+    },
+    beforeMount() {
+        this.getPokemon();
     },
     mounted() {
         console.log(this.$route.params.name);
-    },
-    updated(){
-        console.log(this.$route.params.name);
-        
+        this.getPokemon()
     },
     methods: {
+        getPokemon() {
+            this.pokemonName = this.$route.params.name.toLowerCase()
+            console.log(this.pokemonName)
+            axios.get(`https://pokeapi.co/api/v2/pokemon/${this.pokemonName}`)
+                .then(response => {
+                    this.dataContainer = response.data
+                }).catch(error => {
+                    console.error("Errore", error)
+                })
+            console.log(this.dataContainer)
+            console.log(this.dataContainer.id)
+            this.nascondi = !this.nascondi
+        }
 
-        // CONTROLLA
-
-        // getPokemon() {
-        //     this.pokemonName = this.$route.params.name.toLowerCase()
-        //     console.log(this.pokemonName)
-        //     axios.get(`https://pokeapi.co/api/v2/pokemon/${this.pokemonName}`).then(response => {
-        //         this.dataContainer = response.data
-        //     }).catch(error => {
-        //         console.error("Errore", error)
-        //     })
-        //     console.log(this.dataContainer)
-        // }
-            
+    },
+    updated() {
+        this.pokemonName = this.$route.params.name.toLowerCase()
+        console.log(this.pokemonName)
     }
 }
 
@@ -71,9 +77,16 @@ export default {
         </div>
     </div>
     <!-- POKEDEX -->
-    <div>
-        <button @click="getPokemon">Clicca</button>
-    </div>
+    <section class="mb-10">
+        <button @click="getPokemon">clic</button>
+        <div v-show="nascondi">
+            <p>{{ this.dataContainer.name }}</p>
+            <img :src="this.dataContainer.sprites.other.showdown.front_default" alt="">
+        </div>
+
+    </section>
+
+
     <!-- PRODOTTI SIMILI -->
     <div>
 
