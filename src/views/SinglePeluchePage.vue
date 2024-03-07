@@ -7,14 +7,40 @@ export default {
         return {
             products: ProductData,
             peluches: ProductData.peluches,
-            counter: 0
+            counter: 0,
+            dataContainer: [],
+            pokemonName: "",
+            show: false
         }
     },
+    beforeMount() {
+        this.getPokemon();
+    },
+    mounted() {
+        console.log(this.$route.params.name);
+        this.getPokemon()
+    },
     methods: {
+        getPokemon() {
+            this.pokemonName = this.$route.params.name.toLowerCase()
+            console.log(this.pokemonName)
+            axios.get(`https://pokeapi.co/api/v2/pokemon/${this.pokemonName}`)
+                .then(response => {
+                    this.dataContainer = response.data
+                }).catch(error => {
+                    console.error("Errore", error)
+                })
+            console.log(this.dataContainer)
+            console.log(this.dataContainer.id)
+        },
         updateCounter() {
             this.counter++
             console.log(this.counter)
-        }
+        },
+
+    },
+    beforeUpdate() {
+        this.show = !this.show
     }
 }
 
@@ -66,7 +92,14 @@ export default {
         </div>
     </main>
 
-
+    <!-- POKEDEX -->
+    <section class="mb-10">
+        <button @click="getPokemon">clic</button>
+        <div v-show="show">
+            <p>{{ this.dataContainer.name }}</p>
+            <img :src="this.dataContainer.sprites.other.showdown.front_default" alt="">
+        </div>
+    </section>
 
 
     <!-- LIKE ALSO-->
