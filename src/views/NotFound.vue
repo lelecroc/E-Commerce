@@ -4,9 +4,7 @@
   <!-- 4POKEBALL4 -->
   <div class="text-center text-[#3b3b3b] mt-[100px]">
     <div class="flex justify-center">
-      <h1 class="text-[100px] font-semibold md:text-[150px] lg:text-[200px]">4</h1>
-      <img src="/src/assets/bulbaball1.png" alt="logo" class=" h-[180px] md:h-[300px] lg:h-[400px]">
-      <h1 class="text-[100px] font-semibold md:text-[150px] lg:text-[200px]">4</h1>
+      <img src="/src/assets/404img.png" alt="logo" class=" h-[180px] md:h-[300px] lg:h-[400px]"> 
     </div>
 
 
