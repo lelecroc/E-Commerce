@@ -119,8 +119,6 @@ export default {
         <div v-show="!purchaseCompleted" class="flex flex-col rounded-lg shadow-lg p-6 bg-white mt-9">
             <h2 class="text-xl font-bold mb-4 text-black">Checkout</h2>
             <div class="mb-4">
-                <!-- <label for="indirizzoConsegna" class="block text-gray-700 text-sm font-bold mb-2">Indirizzo di
-                    consegna:</label> -->
                 <input type="text" v-model="address"
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     placeholder="Inserisci il tuo indirizzo">
