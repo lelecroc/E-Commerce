@@ -162,7 +162,7 @@ export default {
       <!-- EMA -->
       <div data-aos="fade-out" data-aos-duration="1000">
         <li class=" mx-[15px] flex flex-col justify-center items-center text-center -2">
-          <a href="https://github.com/lelecroc">
+          <a href="https://github.com/lelecroc" target=“_blank”>
             <div class="flex flex-col justify-center items-center ">
               <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
                 <font-awesome-icon icon="fish" class="text-[27px] text-icon-gray" />
@@ -176,7 +176,7 @@ export default {
       <!-- MARTI -->
       <div data-aos="fade-out" data-aos-duration="1000">
         <li class="mx-[15px] flex flex-col items-center justify-center text-center">
-          <a href="https://github.com/MartinaZanzani">
+          <a href="https://github.com/MartinaZanzani" target=“_blank”>
             <div class="flex flex-col justify-center items-center ">
               <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
                 <font-awesome-icon icon="hippo" class="text-[27px] text-icon-gray" />
@@ -190,7 +190,7 @@ export default {
       <!-- CAPITANO -->
       <div data-aos="fade-out" data-aos-duration="1000">
         <li class="mx-[15px] flex flex-col text-center">
-          <a href="https://github.com/diseasedavide">
+          <a href="https://github.com/diseasedavide" target=“_blank”>
             <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
               <font-awesome-icon icon="otter" class="text-[27px] text-icon-gray" />
             </div>
@@ -202,7 +202,7 @@ export default {
       <!-- SARA -->
       <div data-aos="fade-out" data-aos-duration="1000">
         <li class="mx-[15px] flex flex-col text-center">
-          <a href="https://github.com/saraobia">
+          <a href="https://github.com/saraobia" target=“_blank”>
             <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
               <font-awesome-icon icon="dragon" class="text-[27px] text-icon-gray" />
             </div>
@@ -216,7 +216,7 @@ export default {
       <!-- EMANUEL -->
       <div data-aos="fade-out" data-aos-duration="1000">
         <li class="mx-[15px] flex flex-col text-center">
-          <a href="https://github.com/ManuEmme">
+          <a href="https://github.com/ManuEmme" target=“_blank”>
             <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
               <font-awesome-icon icon="spider" class="text-[27px] text-icon-gray" />
             </div>
@@ -228,7 +228,7 @@ export default {
       <!-- MARCE -->
       <div data-aos="fade-out" data-aos-duration="1000">
         <li class="mx-[15px] flex flex-col text-center">
-          <a href="https://github.com/KyraelDev">
+          <a href="https://github.com/KyraelDev" target=“_blank”>
             <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
               <font-awesome-icon icon="crow" class="text-[27px] text-icon-gray" />
             </div>
