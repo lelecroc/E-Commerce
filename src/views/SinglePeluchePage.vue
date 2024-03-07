@@ -7,13 +7,40 @@ export default {
         return {
             products: ProductData,
             peluches: ProductData.peluches,
-            counter: 0
+            counter: 0,
+            dataContainer: [],
+            pokemonName: ""
         }
     },
+    beforeMount() {
+        this.getPokemon();
+    },
+    mounted() {
+        console.log(this.$route.params.name);
+        this.getPokemon()
+    },
     methods: {
+        getPokemon() {
+            this.pokemonName = this.$route.params.name.toLowerCase()
+            console.log(this.pokemonName)
+            axios.get(`https://pokeapi.co/api/v2/pokemon/${this.pokemonName}`)
+                .then(response => {
+                    this.dataContainer = response.data
+                }).catch(error => {
+                    console.error("Errore", error)
+                })
+            console.log(this.dataContainer)
+            console.log(this.dataContainer.id)
+        },
         updateCounter() {
             this.counter++
             console.log(this.counter)
+        },
+
+    },
+    watch: {
+        $route(to, from) {
+            this.getPokemon()
         }
     }
 }
@@ -66,14 +93,29 @@ export default {
         </div>
     </main>
 
-
+    <!-- POKEDEX -->
+    <section class="mb-10 flex flex-col justify-center items-center">
+        <h2 class="font-serif text-dark-gray text-[36px] text-center mb-[40px] font-bold">Discover more</h2>
+        <div class="flex flex-row-reverse items-center">
+            <div class="text-dark-gray">
+                <p class="font-semibold text-[20px] mb-2"><span class="text-light-blue">{{ this.dataContainer.name.toUpperCase() }}</span></p>
+                <p  class="font-semibold ">Type: <span class="text-gray-p">{{ this.dataContainer.types.map(type =>
+        type.type.name).join(' ').toUpperCase() }}</span></p>
+                <p  class="font-semibold ">Height: <span class="text-gray-p">{{ this.dataContainer.height }} dm</span> </p>
+                <p  class="font-semibold ">Weight: <span class="text-gray-p">{{ this.dataContainer.weight }} hg</span> </p>
+            </div>
+            <div class="bg-white shadow-xl w-[150px] h-[150px] flex items-center justify-center rounded-full mr-10">
+                <img :src="this.dataContainer.sprites.other.showdown.front_default" alt="">
+            </div>
+        </div>
+    </section>
 
 
     <!-- LIKE ALSO-->
     <section>
 
         <div>
-            <h1 class="text-center text-[36px] font-serif text-dark-gray font-bold">You might also like it</h1>
+            <h1 class="text-center text-[36px] font-serif text-dark-gray font-bold mb-12 mt-16">You might also like..</h1>
             <ul class="overflow-x-auto h-[480px] flex pb-2 pt-5">
                 <li v-for="items in peluches" class="ml-5">
                     <!-- CARD -->

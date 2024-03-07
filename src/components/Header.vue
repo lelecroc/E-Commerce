@@ -112,7 +112,7 @@ export default {
                   class="border-2 rounded-lg py-1 px-2" id="passInput">
               </div>
             </div>
-            <div class="hidden md:flex justify-center items-center md:items-center">
+            <div class="hidden md:flex md:justify-center md:items-center ">
               <img v-show="imgLogin" src="/src/assets/img/loginbase.png" alt="charmander"
                 class="hidden md:flex h-[100px] md:h-[150px] lg:h-[200px]">
               <img v-show="!imgLogin" src="/src/assets/img/pokemonerror.png" alt="charmander"

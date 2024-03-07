@@ -74,7 +74,7 @@ export default {
     <section>
 
 
-        <h1 class="text-center text-[36px] font-serif text-dark-gray font-bold">You might also like it</h1>
+        <h1 class="text-center text-[36px] font-serif text-dark-gray font-bold">You might also like..</h1>
         <!-- LIST -->
         <ul class="overflow-x-auto h-[480px] flex pb-2 pt-5">
 
