@@ -8,12 +8,12 @@ export default {
     Header,
     Footer
   }
+
 }
 </script>
 
 <template>
-  <Header  />
+  <Header />
   <RouterView />
   <Footer />
 </template>
-

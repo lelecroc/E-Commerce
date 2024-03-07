@@ -1,12 +1,12 @@
 {
     "users": [
         {
-            "user": "lelecroc",
-            "password": "123456"
-        },
-        {
             "user": "diseasedavide",
             "password": "pine"
+        },
+        {
+            "user": "lelecroc",
+            "password": "123456"
         },
         {
             "user": "saraobia",
