@@ -1,12 +1,12 @@
 <script>
-import TestData from "@/Jsons/test.json"
+import usersData from "@/Jsons/users.json"
 
 export default {
   data() {
     return {
       showLogin: false,
       checkOk: false,
-      testlist: TestData,
+      userslist: usersData,
       accountName: "",
       loginError: false,
       imgLogin: true
@@ -30,8 +30,8 @@ export default {
       }, 5000);
     },
     checkLogin() {
-      for (let i = 0; i < TestData.users.length; i++) {
-        if (TestData.users[i].user == userInput.value && TestData.users[i].password == passInput.value) {
+      for (let i = 0; i < usersData.users.length; i++) {
+        if (usersData.users[i].user == userInput.value && usersData.users[i].password == passInput.value) {
           console.log("ciao")
           this.checkOver()
           this.showLoginFunc()
