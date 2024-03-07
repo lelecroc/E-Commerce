@@ -1,5 +1,7 @@
 # E-Commerce
 
+![proj](https://github.com/lelecroc/E-Commerce/assets/149404185/a31d0de4-785a-45a2-838d-cd94745c610e)
+
 ## Our aim
 
 This is a group project made to test our knowledge and skill with Vue.js. We chose an e-commerce project that sells pokemon related items because this brand fits well with this concept.
@@ -28,6 +30,14 @@ We created our base project, our .json files, we decided on a structure to follo
 ### 05/03
 
 We created every view page necessary to this project. We updated the various cards and created a single reusable card that could fit our needs. We updated our .json to meet our needs, maily adding a key. We linked the items to a single detailed page of itself, that works for every item in the site.
+
+### 06/03
+
+The site is now completely responsive. We started working on the different pages and components. We implemented FontAwesome.
+
+### 07/03
+
+We restructured every SinglePage, we added the ability to like or dislike the item. We completed page404, our Checkoutpage and the Login/logout functionality. We implemented AOS.
 
 ## Recommended IDE Setup
 
