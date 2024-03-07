@@ -15,7 +15,6 @@ export default {
   },
   methods: {
     addPelucheToCart() {
-      this.container.push("ciao")
       console.log(this.container)
     },
     updateCounter() {
@@ -99,7 +98,7 @@ export default {
       <div class="flex overflow-x-auto pb-[50px]">
         <li class="ml-5" v-for="items in products.cards">
           <!-- CARDS -->
-          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="card/" :spec="items.name"
+          <TemplateCard @event="updateCounter" :title="items.title" :price="items.price" :imgSrc="items.img" path="card/" :spec="items.name"
             imgClass="w-[150px] h-[150px] rounded-lg" />
         </li>
       </div>
@@ -110,7 +109,7 @@ export default {
       <div class="flex overflow-x-auto pb-[50px]">
         <li class="ml-5" v-for="items in products.games">
           <!-- GAME -->
-          <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="game/" :spec="items.id"
+          <TemplateCard @event="updateCounter" :title="items.title" :price="items.price" :imgSrc="items.img" path="game/" :spec="items.id"
             imgClass=" w-[150px] h-[150px] rounded-lg" />
         </li>
       </div>
