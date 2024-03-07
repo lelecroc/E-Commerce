@@ -8,7 +8,8 @@ export default {
       checkOk: false,
       testlist: TestData,
       accountName: "",
-      loginError: false
+      loginError: false,
+      imgLogin: true
     };
   },
   methods: {
@@ -20,11 +21,13 @@ export default {
     },
     callError() {
       this.loginError = !this.loginError
+      this.imgLogin = !this.imgLogin
       userInput.value= "";
       passInput.value= "";
       setTimeout(() => {
         this.loginError = !this.loginError
-      }, 2000);
+        this.imgLogin = !this.imgLogin
+      }, 5000);
     },
     checkLogin() {
       for (let i = 0; i < TestData.users.length; i++) {
@@ -35,6 +38,7 @@ export default {
           break
         } else {
           this.callError()
+          this.imgChangeLogin()
           break
         }
 
@@ -68,7 +72,7 @@ export default {
         <ul class="flex justify-center mt-[5px] p-[10px]">
           <li class="flex">
             <div v-show="checkOk" class="mr-4">
-              <p class="font-sans">Bentornato, <span class="font-bold">{{ accountName }}</span></p>
+              <p class="font-sans">Welcome back, <span class="font-bold">{{ accountName }}</span></p>
             </div>
             <button name="login" @click="showLoginFunc">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -110,7 +114,8 @@ export default {
               </div>
             </div>
             <div class="flex justify-center items-center md:flex md:justify-center md:items-center">
-              <img src="/src/assets/img/jumbo.png" alt="charmander" class="h-[100px] md:h-[150px] lg:h-[200px]">
+              <img v-show="imgLogin" src="/src/assets/img/loginbase.png" alt="charmander" class="h-[100px] md:h-[150px] lg:h-[200px]">
+              <img v-show="!imgLogin" src="/src/assets/img/pokemonerror.png" alt="charmander" class="h-[100px] md:h-[150px] lg:h-[200px]">
             </div>
           </div>
           <div class="mt-10">
