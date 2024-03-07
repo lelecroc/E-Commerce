@@ -68,7 +68,7 @@ export default {
     <section>
         <!-- STEP 1 / EMPTY BASKET -->
         <!-- TO DO: REMOVE FAKE CONDITION -->
-        <div v-show="bool">Il tuo carrello è vuoto.</div>
+        <div v-show="bool">Your shopping cart is empty.</div>
         <!-- STEP 2 / FULL BASKET (AT LEAST 1 ITEM) -->
         <div
             class="h-[2500px] items-center md:items-start flex flex-col md:flex-row md:justify-center md:gap-60 my-[80px] md:h-[1400px]">
@@ -125,38 +125,37 @@ export default {
                         consegna:</label> -->
                     <input type="text" v-model="address"
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        placeholder="Inserisci il tuo indirizzo">
+                        placeholder="Enter your address">
                 </div>
                 <div class="mb-4">
-                    <label for="modalitaPagamento" class="block text-gray-700 text-sm font-bold mb-2">Modalità di
-                        pagamento:</label>
+                    <label for="modalitaPagamento" class="block text-gray-700 text-sm font-bold mb-2">Terms of payment:</label>
                     <select id="modalitaPagamento" name="modalitaPagamento"
                         class="shadow border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
-                        <option>Carta di credito/debito</option>
+                        <option>Credit/debit card</option>
                         <option>PayPal</option>
-                        <option>Bonifico bancario</option>
+                        <option>Bank transfer</option>
                     </select>
                 </div>
                 <div>
                     <div class="text-gray-600">
                         <div class="flex justify-between my-2">
-                            <p>Subtotale: </p>
+                            <p>Subtotal: </p>
                             <span>€XXX,XX</span>
                         </div>
                         <div class="flex justify-between my-2">
-                            <span>Spedizione: {{ address }}</span>
+                            <span>Shipping: {{ address }}</span>
                             <span>€5,00</span>
                         </div>
                         <div class="flex justify-between my-2">
-                            <span>Totale:</span>
+                            <span>Total:</span>
                             <span>€YYY,YY</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex justify-between mt-4">
-                    <button class="bg-gray-700 text-white p-2 rounded-lg">Annulla</button>
-                    <button @click="buyNow" class="bg-[#CE88F0] text-white p-2 rounded-lg">Acquista ora</button>
+                    <button class="bg-gray-700 text-white p-2 rounded-lg">Cancel</button>
+                    <button @click="buyNow" class="bg-[#CE88F0] text-white p-2 rounded-lg">Buy now</button>
                 </div>
             </div>
         </div>
@@ -165,9 +164,9 @@ export default {
 
             <img class="h-[150px] ml-[40px] lg:h-[250px]" src="/src/assets/PikachuContento1.png" alt="">
 
-            <h2 class=" font-bold my-2 text-[30px] lg:text-[40px]">Grazie per il tuo acquisto!</h2>
-            <p class="text-[20px] lg:text-[30px]">Il tuo ordine è stato completato con successo.</p>
-            <router-link to="/" class="bg-[#CE88F0] text-white p-2 rounded-lg my-4 hover:scale-[1.1]">Torna alla
+            <h2 class=" font-bold my-2 text-[30px] lg:text-[40px]">Thank you for your purchase!</h2>
+            <p class="text-[20px] lg:text-[30px]">Your order has been completed successfully.</p>
+            <router-link to="/" class="bg-[#CE88F0] text-white p-2 rounded-lg my-4 hover:scale-[1.1]">Return to
                 Home</router-link>
         </div>
     </section>

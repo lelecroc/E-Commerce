@@ -1,5 +1,28 @@
 {
-    "users": ["diseasedavide", "lelecroc", "saraobia", "martinazanz", "ManuEmme", "JsonStatham"],
-    "passwords": ["davideASROMA", "123456", "odioildesign", "chebellovue", "EmmeManu", "TheJsonKeeper"]
-    
+    "users": [
+        {
+            "user": "diseasedavide",
+            "password": "pine"
+        },
+        {
+            "user": "lelecroc",
+            "password": "123456"
+        },
+        {
+            "user": "saraobia",
+            "password": "odioildesign"
+        },
+        {
+            "user": "pino",
+            "password": "pine"
+        },
+        {
+            "user": "pino",
+            "password": "pine"
+        },
+        {
+            "user": "pino",
+            "password": "pine"
+        }
+    ]
 }

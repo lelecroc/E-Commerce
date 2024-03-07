@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily:{
         serif: ['Lora', 'serif'],
-        sand: ['Inter', 'sans-serif']
+        sans: ['Inter', 'sans-serif']
 
       },
       fontSize: {

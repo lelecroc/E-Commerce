@@ -1,19 +1,53 @@
 <script>
-import userData from "@/Jsons/products.json";
+import usersData from "@/Jsons/users.json"
 
 export default {
   data() {
     return {
-      users: userData,
       showLogin: false,
+      checkOk: false,
+      userslist: usersData,
+      accountName: "",
+      loginError: false,
+      imgLogin: true
     };
   },
   methods: {
     showLoginFunc() {
       this.showLogin = !this.showLogin
+    },
+    checkOver() {
+      this.checkOk = !this.checkOk
+    },
+    callError() {
+      this.loginError = !this.loginError
+      this.imgLogin = !this.imgLogin
+      userInput.value = "";
+      passInput.value = "";
+      setTimeout(() => {
+        this.loginError = !this.loginError
+        this.imgLogin = !this.imgLogin
+      }, 5000);
+    },
+    checkLogin() {
+      const user = usersData.users.some(user => user.user === userInput.value && user.password === passInput.value)
+      if (user) {
+        this.checkOver()
+        this.showLoginFunc()
+      } else {
+        this.callError();
+      }
+    },
+    refreshPage() {
+
+      setTimeout(() => {
+        window.location.reload()
+      }, 100);
     }
   }
-};
+
+}
+
 </script>
 
 <template>
@@ -22,7 +56,7 @@ export default {
   <header>
     <!-- BANNER -->
     <div class="h-[35px] bg-[#79c5ef] text-white font-bold items-center justify-center flex ">
-      <p>Nuovi articoli in arrivo solo oggi 22/06/33</p>
+      <p>New collection releasing on 22/06/33</p>
     </div>
     <nav class=" px-[10px] bg-[#fff] rounded-b-xl shadow-md">
       <!-- DIV CONTAINER HEADER -->
@@ -34,7 +68,10 @@ export default {
 
         <!-- lOGIN/SEARCH/CARRELLO -->
         <ul class="flex justify-center mt-[5px] p-[10px]">
-          <li>
+          <li class="flex">
+            <div v-show="checkOk" class="mr-4">
+              <p class="font-sans">Welcome back, <span class="font-bold">{{ accountName }}</span></p>
+            </div>
             <button name="login" @click="showLoginFunc">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
@@ -56,28 +93,42 @@ export default {
         </ul>
       </div>
       <div v-show="showLogin"
-        class="bg-slate-300/50 backdrop-blur-sm absolute z-10 top-0 right-0 left-0 bottom-0 flex justify-center items-center">
+        class="bg-slate-300/50 backdrop-blur-sm   fixed z-10 top-0 right-0 left-0 bottom-0 h-screen flex justify-center items-center">
         <button @click="showLoginFunc"
-          class="flex justify-center items-center bg-white rounded-full w-[40px] h-[40px] text-center mx-4">X</button>
-        <div class="flex flex-col justify-center items-center p-4 bg-white shadow-lg rounded-lg h-[60%] w-[50%]">
+          class="flex bg-fuschia rounded-full h-[48px] w-[48px] justify-center items-center text-center mx-4">
+          <font-awesome-icon icon="circle-xmark" class="text-white h-[50px]" /></button>
+        <div class="flex flex-col justify-center items-center p-4 bg-white shadow-lg  rounded-lg h-[60%] w-[50%]">
           <div class="mb-10">
             <img src="/src/assets/logo.svg" alt="logo" class="h-[40px] md:h-[44px] lg:h-[48px]">
           </div>
           <div class="flex gap-4">
             <div class="flex flex-col justify-center items-center">
               <div class="mb-7">
-                <p class="font-bold">Username</p><input type="text" placeholder="Username.." class="border-2 rounded-lg">
+                <p class="font-bold">Username</p><input type="text" placeholder="Username.."
+                  class="border-2 rounded-lg py-1 px-2" id="userInput" v-model="accountName">
               </div>
               <div>
-                <p class="font-bold">Password</p><input type="text" placeholder="Password.." class="border-2 rounded-lg">
+                <p class="font-bold">Password</p><input type="password" placeholder="Password.."
+                  class="border-2 rounded-lg py-1 px-2" id="passInput">
               </div>
             </div>
             <div class="flex justify-center items-center md:flex md:justify-center md:items-center">
-              <img src="/src/assets/img/jumbo.png" alt="charmander" class="h-[100px] md:h-[150px] lg:h-[200px]">
+              <img v-show="imgLogin" src="/src/assets/img/loginbase.png" alt="charmander"
+                class="h-[100px] md:h-[150px] lg:h-[200px]">
+              <img v-show="!imgLogin" src="/src/assets/img/pokemonerror.png" alt="charmander"
+                class="h-[100px] md:h-[150px] lg:h-[200px]">
             </div>
           </div>
           <div class="mt-10">
-            <button @click="showLoginFunc" class="mr-[10px] focus:outline-none rounded-xl border-2 border-fuschia font-semibold text-gray-p py-[10px] px-[20px] shadow-xl">Login</button>
+            <button @click="checkLogin"
+              class="mr-[10px] focus:outline-none rounded-xl border-2 border-fuschia font-semibold text-gray-p py-[10px] px-[20px] shadow-xl">Login</button>
+            <RouterLink to="/">
+              <button @click="refreshPage" v-show="checkOk"
+                class="ml-[10px] focus:outline-none rounded-xl border-2 border-fuschia bg-fuschia font-semibold text-white py-[10px] px-[20px] shadow-xl">Logout</button>
+            </RouterLink>
+          </div>
+          <div v-show="loginError">
+            <p class="text-red-600 mt-10">Wrong username and/or password</p>
           </div>
         </div>
       </div>
