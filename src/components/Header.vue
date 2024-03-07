@@ -20,6 +20,11 @@ export default {
     },
     callError() {
       this.loginError = !this.loginError
+      userInput.value= "";
+      passInput.value= "";
+      setTimeout(() => {
+        this.loginError = !this.loginError
+      }, 2000);
     },
     checkLogin() {
       for (let i = 0; i < TestData.users.length; i++) {
