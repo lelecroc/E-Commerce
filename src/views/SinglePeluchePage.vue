@@ -1,31 +1,34 @@
 <script>
 import ProductData from "@/Jsons/products.json"
+import axios from "axios"
 
 export default {
     data() {
         return {
             products: ProductData,
             peluches: ProductData.peluches,
-            pokemonName: this.$route.params.name.toLowerCase(),
-            dataContainer: []
+            counter: 0
         }
     },
-    mounted() {
-        console.log(this.$route.params.name);      
-    },
-    updated() {
-        console.log(this.$route.params.name);    
-
-    },
     methods: {
-
-
+        updateCounter() {
+            this.counter++
+            console.log(this.counter)
+        }
     }
 }
 
 </script>
 
 <template>
+
+    <!-- CART NOTIFICATION -->
+    <div v-show="counter > 0"
+        class="h-[25px] w-[25px] rounded-full bg-violet opacity-75 absolute top-[45px] right-[10px]"></div>
+    <div v-show="counter > 0" class="font-semibold text-white text-custom-xs absolute top-[46px] right-[18px]">{{
+        counter
+    }}</div>
+
     <!-- ARTICLE SECTION -->
     <main class="flex my-[100px] md:flex items-center justify-center">
         <div v-for="peluche in peluches">
@@ -41,14 +44,14 @@ export default {
                     <p class="mb-[20px] md:mb-[0px] text-[16px] md:text-[18px] font-bold ">{{ peluche.price }} €</p>
                     <div class="mb-[50px]">
                         <h2 class="text-[30px] text-black-gray font-bold md:text-[36px] lg:text-[40px]"> {{
-            peluche.title }} </h2>
+        peluche.title }} </h2>
                         <p class="text-[16px] text-gray-p"> {{ peluche.description }} </p>
                         <p class="text-[14px]">Material: {{ peluche.material }}</p>
                     </div>
                     <!-- BTN -->
                     <div class="w-[350px] md:w-[380px] lg:w-[480px] flex items-center justify-center md:justify-end ">
-                        <div
-                            class="w-[200px] h-[45px] flex flex-end items-center px-[30px] py-[8px] bg-gradient-135 from-light-blue to-fuschia shadow-xl rounded-xl">
+                        <div @click="updateCounter"
+                            class="cursor-pointer w-[200px] h-[45px] flex flex-end items-center px-[30px] py-[8px] bg-gradient-135 from-light-blue to-fuschia shadow-xl rounded-xl">
                             <button class="font-bold mr-[10px] text-white"> Add to Cart</button>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="#fff" class="w-6 h-6">
@@ -62,6 +65,8 @@ export default {
             </div>
         </div>
     </main>
+
+
 
 
     <!-- LIKE ALSO-->
@@ -92,11 +97,14 @@ export default {
 
 
                         <!-- IMG -->
-                        <div class="w-[200px] h-[200px] flex items-center justify-center">
-                            <div class="w-[100px]  rounded-lg">
-                                <img :src="'.' + items.img" :alt="items.name">
+                        <RouterLink :to="'/peluche/' + items.name">
+                            <div class="w-[200px] h-[200px] flex items-center justify-center">
+                                <div class="w-[100px]  rounded-lg">
+                                    <img :src="'.' + items.img" :alt="items.name">
+                                </div>
                             </div>
-                        </div>
+                        </RouterLink>
+
                         <!-- TEXT CONTENT -->
 
                         <div class="w-[230px] text-center">
