@@ -1,13 +1,12 @@
 <script>
 import ProductData from "@/Jsons/products.json"
+import axios from "axios"
 
 export default {
     data() {
         return {
             products: ProductData,
             peluches: ProductData.peluches,
-            pokemonName: this.$route.params.name.toLowerCase(),
-            dataContainer: [],
             counter: 0
         }
     },
@@ -15,17 +14,6 @@ export default {
         updateCounter() {
             this.counter++
             console.log(this.counter)
-        },
-        mounted() {
-            console.log(this.$route.params.name);
-        },
-        updated() {
-            console.log(this.$route.params.name);
-
-        },
-        methods: {
-
-
         }
     }
 }
@@ -77,6 +65,8 @@ export default {
             </div>
         </div>
     </main>
+
+
 
 
     <!-- LIKE ALSO-->
