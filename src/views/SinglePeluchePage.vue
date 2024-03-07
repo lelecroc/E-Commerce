@@ -1,5 +1,6 @@
 <script>
 import ProductData from "@/Jsons/products.json"
+import { info } from "autoprefixer";
 import axios from "axios"
 
 export default {
@@ -10,8 +11,11 @@ export default {
             counter: 0,
             dataContainer: [],
             pokemonName: "",
-            show: false
+            show: true
         }
+    },
+    beforeMount() {
+        this.getPokemon();
     },
     beforeMount() {
         this.getPokemon();
@@ -39,8 +43,10 @@ export default {
         },
 
     },
-    beforeUpdate() {
-        this.show = !this.show
+    watch: {
+        $route(to, from) {
+            this.getPokemon()
+        }
     }
 }
 
@@ -69,8 +75,9 @@ export default {
                     class="text-center md:text-left text-dark-gray w-[350px] md:w-[400px] lg:w-[500px] flex flex-col justify-around">
                     <p class="mb-[20px] md:mb-[0px] text-[16px] md:text-[18px] font-bold ">{{ peluche.price }} €</p>
                     <div class="mb-[50px]">
-                        <h2 class="text-[30px] text-black-gray font-bold md:text-[36px] lg:text-[40px]"> {{
-        peluche.title }} </h2>
+                        <h2 class="text-[30px] text-black-gray font-bold md:text-[36px] lg:text-[40px]">
+                            {{ peluche.title }}
+                        </h2>
                         <p class="text-[16px] text-gray-p"> {{ peluche.description }} </p>
                         <p class="text-[14px]">Material: {{ peluche.material }}</p>
                     </div>
