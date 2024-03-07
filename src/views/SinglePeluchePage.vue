@@ -11,10 +11,10 @@ export default {
         }
     },
     mounted() {
-        console.log(this.$route.params.name);
+        console.log(this.$route.params.name);      
     },
     updated() {
-        console.log(this.$route.params.name);
+        console.log(this.$route.params.name);    
 
     },
     methods: {
