@@ -39,7 +39,10 @@ export default {
       }
     },
     refreshPage() {
-      window.location.reload()
+
+      setTimeout(() => {
+        window.location.reload()
+      }, 100);
     }
   }
 
@@ -53,7 +56,7 @@ export default {
   <header>
     <!-- BANNER -->
     <div class="h-[35px] bg-[#79c5ef] text-white font-bold items-center justify-center flex ">
-      <p>Nuovi articoli in arrivo solo oggi 22/06/33</p>
+      <p>New collection releasing on 22/06/33</p>
     </div>
     <nav class=" px-[10px] bg-[#fff] rounded-b-xl shadow-md">
       <!-- DIV CONTAINER HEADER -->
@@ -90,10 +93,11 @@ export default {
         </ul>
       </div>
       <div v-show="showLogin"
-        class="bg-slate-300/50 backdrop-blur-sm absolute z-10 top-0 right-0 left-0 bottom-0 flex justify-center items-center">
+        class="bg-slate-300/50 backdrop-blur-sm   fixed z-10 top-0 right-0 left-0 bottom-0 h-screen flex justify-center items-center">
         <button @click="showLoginFunc"
-          class="flex justify-center items-center bg-white rounded-full w-[40px] h-[40px] text-center mx-4">X</button>
-        <div class="flex flex-col justify-center items-center p-4 bg-white shadow-lg rounded-lg h-[60%] w-[50%]">
+          class="flex bg-fuschia rounded-full h-[48px] w-[48px] justify-center items-center text-center mx-4">
+          <font-awesome-icon icon="circle-xmark" class="text-white h-[50px]" /></button>
+        <div class="flex flex-col justify-center items-center p-4 bg-white shadow-lg  rounded-lg h-[60%] w-[50%]">
           <div class="mb-10">
             <img src="/src/assets/logo.svg" alt="logo" class="h-[40px] md:h-[44px] lg:h-[48px]">
           </div>
@@ -118,8 +122,10 @@ export default {
           <div class="mt-10">
             <button @click="checkLogin"
               class="mr-[10px] focus:outline-none rounded-xl border-2 border-fuschia font-semibold text-gray-p py-[10px] px-[20px] shadow-xl">Login</button>
-            <button @click="refreshPage" v-show="checkOk"
-              class="ml-[10px] focus:outline-none rounded-xl border-2 border-fuschia bg-fuschia font-semibold text-white py-[10px] px-[20px] shadow-xl">Logout</button>
+            <RouterLink to="/">
+              <button @click="refreshPage" v-show="checkOk"
+                class="ml-[10px] focus:outline-none rounded-xl border-2 border-fuschia bg-fuschia font-semibold text-white py-[10px] px-[20px] shadow-xl">Logout</button>
+            </RouterLink>
           </div>
           <div v-show="loginError">
             <p class="text-red-600 mt-10">Wrong username and/or password</p>

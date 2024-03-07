@@ -56,9 +56,9 @@ export default {
 
         <!-- TEXT CONTENT-->
          <div class=" w-[230px] text-center">
-            <h6 class="text-[16px] font-medium text-[#3B3232]">{{ price }} €</h6>
+            <h6 class="text-[16px] font-medium text-dark-gray">{{ price }} €</h6>
              <RouterLink :to="path + spec">
-                <h6 class="text-[22px] leading-[26px] text-center font-bold text-[#3B3232] ">{{ title }}</h6>
+                <h6 class="text-[22px] leading-[26px] text-center font-bold text-dark-gray ">{{ title }}</h6>
              </RouterLink>
          </div>
 
