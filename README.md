@@ -8,7 +8,7 @@ This is a group project made to test our knowledge and skill with Vue.js. We cho
 
 ## What tools did we use
 
-We used the latest version of Vue.js and Tailwind. We created 2 .json files.
+We used the latest version of Vue.js and Tailwind. We created 2 .json files. We used axios for our API calls, AOS library for the animations, FontAwesome, Pinia.
 
 ## Coding Rules
 
@@ -19,7 +19,7 @@ We used the latest version of Vue.js and Tailwind. We created 2 .json files.
 
 ## Roadmap
 
-After the "release" we will implement a "Vuekedex" page and another page where the user can see his/hers favourite items
+After the "release" we will implement a fully working checkout process.
 
 ## Diary
 
@@ -37,7 +37,7 @@ The site is now completely responsive. We started working on the different pages
 
 ### 07/03
 
-We restructured every SinglePage, we added the ability to like or dislike the item. We completed page404, our Checkoutpage and the Login/logout functionality. We implemented AOS.
+We restructured every SinglePage, we added the ability to like or dislike the item. We completed page404, our Checkoutpage and the Login/logout functionality. We implemented AOS. On the "peluche" single page we used axios to interact with PokeAPI and display the actual info of the pokemon itself.
 
 ## Recommended IDE Setup
 
