@@ -1,6 +1,5 @@
 <script>
 import ProductData from "@/Jsons/products.json"
-import axios from "axios"
 
 export default {
     data() {
@@ -16,33 +15,42 @@ export default {
 </script>
 
 <template>
-    <div v-for="game in games">
-        <div class="flex" v-show="this.$route.params.name == game.id">
-            <div class="w-[50%] flex justify-center">
-                <img :src="'.' + game.img" :alt="game.title" class="w-[50%] h-[90%]">
-            </div>
 
-            <div class="w-[50%] flex flex-col justify-around">
-                <div>
-                    <h2 class="text-desktop-2xl font-bold"> {{ game.title }} </h2>
-                    <p class="text-desktop-lg"> {{ game.description }} </p>
+       <!-- ARTICLE SECTION -->
+       <main class="flex my-[100px] md:flex items-center justify-center">
+
+        <div v-for="game in games">
+            <div class="flex flex-col md:flex-row items-center justify-center" v-show="this.$route.params.name == game.id">
+
+                <!-- IMG -->
+                <div class="flex justify-center items-center w-[300px] h-[300px] md:w-[400px] lg:w-[400px] lg:h-[350px] ">
+                    <img :src="'.' + game.img" :alt="game.title" class="w-[200px] md:w-[250px] lg:w-[300px]">
                 </div>
-                <!-- BOTTONE -->
-                <div class="flex items-center">
-                    <p class="text-desktop-xl font-bold mr-6">Price: {{ game.price }} €</p>
-                    <div
-                        class="w-[30%]  flex justify-between items-center px-[30px] py-[8px] bg-gradient-to-r from-[#7AB4D6] to-[#CE88F0] shadow-xl rounded-xl ">
-                        <button class="font-bold mr-[10px] text-white"> Add to Cart</button>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="#fff" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                        </svg>
+                <!-- TEXT CONTENT -->
+                <div class="text-center md:text-left text-dark-gray w-[350px] md:w-[400px] lg:w-[500px] flex flex-col justify-around">
+                    <p class="mb-[20px] md:mb-[0px] text-[16px] md:text-[18px] font-bold ">{{ game.price }} €</p>
+                    <div class="mb-[30px]">
+                        <h2 class="text-[30px] text-black-gray font-bold md:text-[36px] lg:text-[40px]"> {{ game.title }} </h2>
+                        <p class="text-[16px] text-gray-p"> {{ game.description }} </p>
+
+                    </div>
+                    <!-- BTN -->
+                        <div class="w-[350px] md:w-[380px] lg:w-[480px] flex items-center justify-center md:justify-end ">
+                            <div class="w-[200px] h-[45px] flex flex-end items-center px-[30px] py-[8px] bg-gradient-135 from-light-blue to-fuschia shadow-xl rounded-xl">
+                            <button class="font-bold mr-[10px] text-white"> Add to Cart</button>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="#fff" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                            </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+     </main>
+
+
     <!-- PRODOTTI SIMILI -->
     <div>
 

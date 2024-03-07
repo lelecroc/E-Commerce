@@ -26,7 +26,8 @@ export default {
         'fake-white' : '#f9f9f9',
         'icon-gray' : '#d1d8e0',
         'gray-p' : '#686b6b',
-        'dark-gray': '#3b3b3b'
+        'dark-gray': '#3b3b3b',
+        'black-gray' : '#181818'
       },
       backgroundImage: {
         'gradient-135': 'linear-gradient(135deg, var(--tw-gradient-stops))'
