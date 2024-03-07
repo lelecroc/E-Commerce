@@ -28,95 +28,154 @@ export default {
 
 <template>
 
-<!-- ABSOLUTEEE -->
-<div v-show="counter > 0" class="h-[26px] w-[26px] rounded-full bg-[#ccc] absolute top-[55px] right-[15px]"></div>
-<div v-show="counter > 0" class=" absolute top-14 right-6">{{ counter }}</div>
+<!-- CART NOTIFICATION -->
+<div v-show="counter > 0" class="h-[25px] w-[25px] rounded-full bg-violet opacity-75 absolute top-[45px] right-[10px]"></div>
+<div v-show="counter > 0" class="font-semibold text-white text-custom-xs absolute top-[46px] right-[18px]">{{ counter }}</div>
 
 
 
   <!-- DJUMBO -->
-  <div class="flex flex-col justify-center items-center md:flex md:flex-row md:px-[50px]">
-    <!-- div img/3js -->
+  <section class="bg-gradient-[45deg] mt-[50px] md:mt-[100px] from-fuschia to-light-blue flex flex-col justify-center items-center md:flex md:flex-row md:px-[50px]">
+    <!-- IMG -->
     <div class="flex justify-center items-center md:flex md:justify-center md:items-center">
-      <img src="/src/assets/Immaginona.png" alt="charmander" class="h-[300px] md:h-[400px] lg:h-[500px]">
+      <img src="/src/assets/img/jumbo.png" alt="charmander" class="h-[300px] md:h-[350px] lg:h-[500px]">
     </div>
     <!-- div text -->
-    <div class="text-center w-[350px] md:w-[300px] md:text-left lg:w-[400px] border flex flex-col justify-center  md:justify-start md:ml-5">
-      <h1 class="text-[#181818] font-extrabold text-desktop-xl md:text-[36px] md:leading-[44px] lg:text-[50px] lg:leading-[55px] leading-[40px] mb-2">Welcome to our Vuekémon Store</h1>
-      <p class="font-medium text-desktop-xs mb-8 lg:text-[16px] text-[#686b6b]">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Aspernatur
-        consequuntur at expedita doloribus inventore accusantium veritatis earum blanditiis.</p>
+    <div class="text-center w-[350px] md:w-[300px] md:text-left lg:w-[400px] flex flex-col justify-center  md:justify-start md:ml-5 ">
+      <h1 class="font-serif text-dark-gary font-black text-[36px] md:text-[38px] md:leading-[44px] lg:text-[50px] lg:leading-[55px] leading-[40px] mb-2">Welcome to our Vuekémon Store</h1>
+      <p class="font-medium text-desktop-xs mb-8 lg:text-[16px] text-gray-p">Welcome to our Vuekèmon Emporium, where adventure awaits at every corner! Immerse yourself in a world of wonder as you explore shelves adorned with a vibrant array of Vuekèmon merchandise. </p>
 
-     <div class="flex">
-        <input type text placeholder=" Search " class="w-[350px] focus:outline-none rounded-xl border-2 border-[#ce88f0] font-semibold text-[#3b3b3b] py-[10px] px-[8px] shadow-xl">
+     <div class=" flex items-center justify-center lg:justify-start">
+        <button  class="mr-[10px] focus:outline-none rounded-xl border-2 border-fuschia font-semibold text-gray-p py-[10px] px-[20px] shadow-xl">About project</button>
 
-        <!-- <div class="absolute right-20">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-        </svg>
-      </div> -->
+        <button class="ml-[10px] focus:outline-none rounded-xl border-2 border-fuschia bg-fuschia font-semibold text-white py-[10px] px-[20px] shadow-xl">Get started</button>
       </div>
-
-
-
     </div>
-  </div>
+  </section>
   <!-- PALLE-CATEGORIE -->
-  <div class="text-[#181818] flex justify-center items-center gap-7 mt-[80px] mb-[130px] max-[430px]:flex-col md:gap-12">
+  <div class="font-serif font-semibold text-white text-[20px] flex md:text-[26px] lg:text-[32px] justify-center items-center gap-7 mt-[80px] mb-[130px] max-[430px]:flex-col md:gap-12">
 
     <!-- PELUCHE -->
     <a href="#peluches">
-        <div class=" rounded-full flex justify-center items-center bg-[#79C5EF] bg-opacity-60 h-[125px] w-[125px] hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-white hover:bg-[url('/src/assets/img/Gif/Peluche.gif')] hover:bg-cover md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">
+        <div class="rounded-full flex justify-center items-center bg-light-blue bg-opacity-60 h-[125px] w-[125px] hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-icon-gray hover:bg-[url('/src/assets/img/Gif/Peluche.gif')] hover:bg-cover md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">
 
-          <span class=" flex items-center justify-center rounded-full h-[125px] w-[125px] md:h-[170px] md:w-[170px] lg:w-[220px] lg:h-[220px] hover:bg-[rgba(0,0,0,0.4)] font-bold text-[20px] ">Peluches</span>
+          <span class=" flex items-center justify-center rounded-full h-[125px] w-[125px] md:h-[170px] md:w-[170px] lg:w-[220px] lg:h-[220px] hover:bg-[rgba(0,0,0,0.4)]  ">Peluches</span>
         </div>
     </a>
     <!-- CARDS -->
     <a href="#cards">
       <div
-        class="rounded-full flex justify-center items-center bg-[#a1a0df] bg-opacity-60 h-[125px] w-[125px]  hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-white hover:bg-[url('/src/assets/img/Gif/CardGame.gif')] md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">
-        <span class="flex items-center justify-center rounded-full h-[125px] w-[125px] md:h-[170px] md:w-[170px] lg:w-[220px] lg:h-[220px] hover:bg-[rgba(0,0,0,0.4)] font-bold text-[20px]">Cards</span>
+        class="rounded-full flex justify-center items-center bg-violet bg-opacity-60 h-[125px] w-[125px]  hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-icon-gray hover:bg-[url('/src/assets/img/Gif/CardGame.gif')] md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">
+        <span class="flex items-center justify-center rounded-full h-[125px] w-[125px] md:h-[170px] md:w-[170px] lg:w-[220px] lg:h-[220px] hover:bg-[rgba(0,0,0,0.4)] ">Cards</span>
       </div>
     </a>
     <!-- GAMES -->
     <a href="#games">
       <div
-        class="rounded-full flex justify-center items-center bg-[#CE88F0] bg-opacity-60 h-[125px] w-[125px]  hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-white hover:bg-[url('/src/assets/img/Gif/GamesRetro.gif')] md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">
-        <span class="flex items-center justify-center rounded-full h-[125px] w-[125px] hover:bg-[rgba(0,0,0,0.4)] font-bold text-[20px] md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">Games</span>
+        class="rounded-full flex justify-center items-center bg-fuschia bg-opacity-60 h-[125px] w-[125px] hover:transition delay-150 duration-300 ease-in-out hover:scale-[1.3] hover:text-icon-gray hover:bg-[url('/src/assets/img/Gif/GamesRetro.gif')] md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">
+        <span class="flex items-center justify-center rounded-full h-[125px] w-[125px] hover:bg-[rgba(0,0,0,0.4)] md:w-[170px] md:h-[170px] lg:w-[220px] lg:h-[220px]">Games</span>
       </div>
     </a>
   </div>
-  <div>
+
+
+  <!-- E-COMMERCE SECTION -->
+  <main>
     <ul>
       <a name="peluches">
-        <h2 class="font-extrabold text-[#181818] text-center text-[35px] mb-[50px] ml-5">Peluches</h2>
+        <h2 class="font-extrabold font-serif text-dark-gray text-center text-[35px] mb-[50px] ml-5">Peluches</h2>
       </a>
       <div class="flex overflow-x-auto pb-[50px]">
         <li class="ml-5" v-for="items in products.peluches">
+          <!-- PELUCHES -->
           <TemplateCard @event="updateCounter" :title="items.title" :price="items.price" :imgSrc="items.img" path="peluche/" :spec="items.name"
-            imgClass="w-[150px] h-[200px] rounded-lg" />
+            imgClass="w-[150px] h-[150px] rounded-lg" />
         </li>
       </div>
       <a name="cards">
-        <h2 class="text-[#181818] text-center font-extrabold text-[35px] ml-5 mt-[90px] mb-[50px] ">Cards</h2>
+        <h2 class="text-dark-gray font-serif text-center font-extrabold text-[35px] ml-5 mt-[90px] mb-[50px] ">Cards</h2>
       </a>
 
       <div class="flex overflow-x-auto pb-[50px]">
         <li class="ml-5" v-for="items in products.cards">
+          <!-- CARDS -->
           <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="card/" :spec="items.name"
-            imgClass="w-[150px] h-[200px] rounded-lg" />
+            imgClass="w-[150px] h-[150px] rounded-lg" />
         </li>
       </div>
       <a name="games">
-        <h2 class="text-[#181818] text-center font-extrabold text-[35px] ml-5 mt-[90px] mb-[50px]">Games</h2>
+        <h2 class="text-dark-gray font-serif text-center font-extrabold text-[35px] ml-5 mt-[90px] mb-[50px]">Games</h2>
       </a>
 
       <div class="flex overflow-x-auto pb-[50px]">
         <li class="ml-5" v-for="items in products.games">
+          <!-- GAME -->
           <TemplateCard :title="items.title" :price="items.price" :imgSrc="items.img" path="game/" :spec="items.id"
-            imgClass="w-[150px] h-[200px] rounded-lg" />
+            imgClass=" w-[150px] h-[150px] rounded-lg" />
         </li>
       </div>
     </ul>
-  </div>
+  </main>
+
+       <!--TEAM-->
+       <div class="flex flex-col justify-center items-center mb-[60px] mt-[100px] ">
+                        <h2 class="mb-6 font-serif text-center text-[24px] text-dark-gray font-semibold  ">Our beautiful Team</h2>
+                        <ul class=" flex flex-wrap  justify-center text-dark-gray text-[14px]  ">
+                            <!-- EMA -->
+                            <li class="mx-[15px] flex flex-col justify-center items-center text-center -2">
+                                <a href="https://github.com/lelecroc">
+                                  <div class="flex flex-col justify-center items-center ">
+                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                                    <font-awesome-icon icon="fish" class="text-[27px] text-icon-gray" />
+                                </div>
+                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Emanuele</div></div></a>
+
+                            </li>
+
+                            <!-- MARTI -->
+                            <li class="mx-[15px] flex flex-col items-center justify-center text-center">
+                                <a href="https://github.com/MartinaZanzani" >
+                                <div class="flex flex-col justify-center items-center ">
+                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                                <font-awesome-icon icon="hippo" class="text-[27px] text-icon-gray"/> </div >
+                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Martina</div>
+                              </div>
+                            </a>
+                            </li>
+                            <!-- CAPITANO -->
+                            <li class="mx-[15px] flex flex-col text-center">
+                                <a href="https://github.com/diseasedavide" >
+                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                                <font-awesome-icon icon="otter" class="text-[27px] text-icon-gray" /></div>
+                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Davide</div>
+                                </a>
+                            </li>
+                            <!-- SARA -->
+                            <li class="mx-[15px] flex flex-col text-center">
+                                <a href="https://github.com/saraobia" >
+                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                                <font-awesome-icon icon="dragon" class="text-[27px] text-icon-gray" /> </div>
+                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Sara</div>
+
+
+                              </a>
+                            </li>
+                            <!-- EMANUEL -->
+                            <li class="mx-[15px] flex flex-col text-center">
+                                <a href="https://github.com/ManuEmme" >
+                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                                <font-awesome-icon icon="spider" class="text-[27px] text-icon-gray" /></div>
+                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Emanuel</div>
+                                </a>
+                            </li>
+                            <!-- MARCE -->
+                            <li class="mx-[15px] flex flex-col text-center">
+                                <a href="https://github.com/KyraelDev" >
+                                <div class="shadow-xl h-[100px] w-[100px] bg-white flex items-center justify-center rounded-full mb-2">
+                                <font-awesome-icon icon="crow" class="text-[27px] text-icon-gray" /></div>
+                                <div class="text-dark-gray text-[13px] md:text-[16px] font-serif font-semibold">Marcello</div>
+                              </a>
+                            </li>
+                        </ul>
+                </div>
 </template>

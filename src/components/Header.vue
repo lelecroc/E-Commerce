@@ -21,17 +21,18 @@ export default {
   <!-- HEADER -->
   <header >
     <!-- BANNER -->
-    <div class="h-[50px] bg-[#79c5ef] text-white font-bold items-center justify-center flex ">
+    <div class="h-[35px] bg-[#79c5ef] text-white font-bold items-center justify-center flex ">
     <p>Nuovi articoli in arrivo solo oggi 22/06/33</p>
   </div>
     <nav class=" px-[10px] bg-[#fff] rounded-b-xl shadow-md">
       <!-- DIV CONTAINER HEADER -->
-      <div class="flex p-[10px] justify-between items-center">
+      <div class="flex py-[14px] p-[10px] justify-between items-center">
         <!-- LOGO -->
-        <RouterLink to="/" class="text-[30px] text-[#181818] font-extrabold">Vuekémon</RouterLink>
+        <RouterLink to="/" class="text-[30px] text-[#181818] font-extrabold"><img src="/src/assets/logo.svg" alt="logo" class="h-[40px] md:h-[44px] lg:h-[48px]">
+        </RouterLink>
 
         <!-- lOGIN/SEARCH/CARRELLO -->
-        <ul class="flex p-[10px]">
+        <ul class="flex justify-center mt-[5px] p-[10px]">
           <li>
             <button name="login" @click="showLoginFunc">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -41,15 +42,7 @@ export default {
               </svg>
             </button>
           </li>
-          <li>
-            <button name="search">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 ml-4">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-              </svg>
-            </button>
-          </li>
+
           <li>
             <RouterLink name="checkout" to="/checkout">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
