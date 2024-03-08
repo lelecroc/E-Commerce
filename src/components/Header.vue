@@ -93,7 +93,7 @@ export default {
         </ul>
       </div>
       <div v-show="showLogin"
-        class="bg-slate-300/50 backdrop-blur-sm   fixed z-10 top-0 right-0 left-0 bottom-0 h-screen flex justify-center items-center">
+        class="bg-slate-300/50 backdrop-blur-sm fixed z-10 top-0 right-0 left-0 bottom-0 h-screen flex justify-center items-center">
         <button @click="showLoginFunc"
           class="flex bg-fuschia rounded-full h-[48px] w-[48px] justify-center items-center text-center mx-4">
           <font-awesome-icon icon="circle-xmark" class="text-white h-[50px]" /></button>
@@ -112,9 +112,9 @@ export default {
                   class="border-2 rounded-lg py-1 px-2" id="passInput">
               </div>
             </div>
-            <div class="flex justify-center items-center md:flex md:justify-center md:items-center">
+            <div class="hidden md:flex md:justify-center md:items-center ">
               <img v-show="imgLogin" src="/src/assets/img/loginbase.png" alt="charmander"
-                class="h-[100px] md:h-[150px] lg:h-[200px]">
+                class="hidden md:flex h-[100px] md:h-[150px] lg:h-[200px]">
               <img v-show="!imgLogin" src="/src/assets/img/pokemonerror.png" alt="charmander"
                 class="h-[100px] md:h-[150px] lg:h-[200px]">
             </div>

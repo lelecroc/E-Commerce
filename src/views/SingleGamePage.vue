@@ -5,8 +5,14 @@ export default {
     data() {
         return {
             products: ProductData,
-            games: ProductData.games
+            games: ProductData.games,
+            counter: 0
         }
+    }, methods: {
+        updateCounter() {
+            this.counter++
+            console.log(this.counter)
+        },
     },
     mounted() {
         console.log(this.$route.params.name)
@@ -15,6 +21,13 @@ export default {
 </script>
 
 <template>
+
+    <!-- CART NOTIFICATION -->
+    <div v-show="counter > 0"
+        class="h-[25px] w-[25px] rounded-full bg-violet opacity-75 absolute top-[45px] right-[10px]"></div>
+    <div v-show="counter > 0" class="font-semibold text-white text-custom-xs absolute top-[46px] right-[18px]">{{
+        counter
+    }}</div>
 
     <!-- ARTICLE SECTION -->
     <main class="flex my-[100px] md:flex items-center justify-center">
@@ -40,8 +53,9 @@ export default {
                     </div>
                     <!-- BTN -->
                     <div class="w-[350px] md:w-[380px] lg:w-[480px] flex items-center justify-center md:justify-end ">
-                        <div
-                            class="w-[200px] h-[45px] flex flex-end items-center px-[30px] py-[8px] bg-gradient-135 from-light-blue to-fuschia shadow-xl rounded-xl">
+                        <div @click="updateCounter"
+                            class="cursor-pointer w-[200px] h-[45px] flex flex-end items-center px-[30px] py-[8px] bg-gradient-135 from-light-blue to-fuschia shadow-xl rounded-xl">
+                            <!-- FUNCTION addPelucheToCart -->
                             <button class="font-bold mr-[10px] text-white"> Add to Cart</button>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="#fff" class="w-6 h-6">
@@ -60,7 +74,7 @@ export default {
     <section>
 
 
-        <h1 class="text-center text-[36px] font-serif text-dark-gray font-bold">You might also like it</h1>
+        <h1 class="text-center text-[36px] font-serif text-dark-gray font-bold">You might also like..</h1>
         <!-- LIST -->
         <ul class="overflow-x-auto h-[480px] flex pb-2 pt-5">
 
@@ -86,15 +100,17 @@ export default {
 
 
                     <!-- IMG -->
-                    <div class="w-[200px] h-[200px] flex items-center justify-center">
-                        <div class="w-[100px]  rounded-lg">
-                            <img :src="'.' + items.img" :alt="items.name">
+                    <RouterLink :to="'/game/' + items.id">
+                        <div class="w-[200px] h-[200px] flex items-center justify-center">
+                            <div class="w-[100px]  rounded-lg">
+                                <img :src="'.' + items.img" :alt="items.name">
+                            </div>
                         </div>
-                    </div>
+                    </RouterLink>
                     <!-- TEXT CONTENT -->
 
                     <div class="w-[230px] text-center">
-                        <RouterLink :to="'/games/' + items.name">
+                        <RouterLink :to="'/game/' + items.id">
                             <h6 class="text-[18px] font-medium text-[#3B3232]">{{ items.price }} €</h6>
                             <h6 class="text-[24px] font-bold text-[#3B3232] pb-4">{{ items.title }}</h6>
                         </RouterLink>
@@ -103,7 +119,7 @@ export default {
                     <!-- CARD END -->
                     <div class="w-full pb-4 px-[20px] flex justify-between items-center text-[#fff]">
                         <!-- CARD BTN -->
-                        <div @click="emitCounter"
+                        <div @click="updateCounter"
                             class="cursor-pointer w-full h-[50px] flex justify-between items-center px-[30px] py-[8px] bg-gradient-135 from-light-blue to-fuschia shadow-xl rounded-xl ">
                             <button class="font-bold mr-[10px]"> Add to Cart</button>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

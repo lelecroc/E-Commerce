@@ -1,31 +1,61 @@
 <script>
 import ProductData from "@/Jsons/products.json"
+import axios from "axios"
 
 export default {
     data() {
         return {
             products: ProductData,
             peluches: ProductData.peluches,
-            pokemonName: this.$route.params.name.toLowerCase(),
-            dataContainer: []
+            counter: 0,
+            dataContainer: [],
+            pokemonName: ""
         }
+    },
+    beforeMount() {
+        this.getPokemon();
     },
     mounted() {
         console.log(this.$route.params.name);
-    },
-    updated() {
-        console.log(this.$route.params.name);
-
+        this.getPokemon()
     },
     methods: {
+        getPokemon() {
+            this.pokemonName = this.$route.params.name.toLowerCase()
+            console.log(this.pokemonName)
+            axios.get(`https://pokeapi.co/api/v2/pokemon/${this.pokemonName}`)
+                .then(response => {
+                    this.dataContainer = response.data
+                }).catch(error => {
+                    console.error("Errore", error)
+                })
+            console.log(this.dataContainer)
+            console.log(this.dataContainer.id)
+        },
+        updateCounter() {
+            this.counter++
+            console.log(this.counter)
+        },
 
-
+    },
+    watch: {
+        $route(to, from) {
+            this.getPokemon()
+        }
     }
 }
 
 </script>
 
 <template>
+
+    <!-- CART NOTIFICATION -->
+    <div v-show="counter > 0"
+        class="h-[25px] w-[25px] rounded-full bg-violet opacity-75 absolute top-[45px] right-[10px]"></div>
+    <div v-show="counter > 0" class="font-semibold text-white text-custom-xs absolute top-[46px] right-[18px]">{{
+        counter
+    }}</div>
+
     <!-- ARTICLE SECTION -->
     <main class="flex my-[100px] md:flex items-center justify-center">
         <div v-for="peluche in peluches">
@@ -41,14 +71,14 @@ export default {
                     <p class="mb-[20px] md:mb-[0px] text-[16px] md:text-[18px] font-bold ">{{ peluche.price }} €</p>
                     <div class="mb-[50px]">
                         <h2 class="text-[30px] text-black-gray font-bold md:text-[36px] lg:text-[40px]"> {{
-            peluche.title }} </h2>
+        peluche.title }} </h2>
                         <p class="text-[16px] text-gray-p"> {{ peluche.description }} </p>
                         <p class="text-[14px]">Material: {{ peluche.material }}</p>
                     </div>
                     <!-- BTN -->
                     <div class="w-[350px] md:w-[380px] lg:w-[480px] flex items-center justify-center md:justify-end ">
-                        <div
-                            class="w-[200px] h-[45px] flex flex-end items-center px-[30px] py-[8px] bg-gradient-135 from-light-blue to-fuschia shadow-xl rounded-xl">
+                        <div @click="updateCounter"
+                            class="cursor-pointer w-[200px] h-[45px] flex flex-end items-center px-[30px] py-[8px] bg-gradient-135 from-light-blue to-fuschia shadow-xl rounded-xl">
                             <button class="font-bold mr-[10px] text-white"> Add to Cart</button>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="#fff" class="w-6 h-6">
@@ -63,12 +93,29 @@ export default {
         </div>
     </main>
 
+    <!-- POKEDEX -->
+    <section class="mb-10 flex flex-col justify-center items-center">
+        <h2 class="font-serif text-dark-gray text-[36px] text-center mb-[40px] font-bold">Discover more</h2>
+        <div class="flex flex-row-reverse items-center">
+            <div class="text-dark-gray">
+                <p class="font-semibold text-[20px] mb-2"><span class="text-light-blue">{{ this.dataContainer.name.toUpperCase() }}</span></p>
+                <p  class="font-semibold ">Type: <span class="text-gray-p">{{ this.dataContainer.types.map(type =>
+        type.type.name).join(' ').toUpperCase() }}</span></p>
+                <p  class="font-semibold ">Height: <span class="text-gray-p">{{ this.dataContainer.height }} dm</span> </p>
+                <p  class="font-semibold ">Weight: <span class="text-gray-p">{{ this.dataContainer.weight }} hg</span> </p>
+            </div>
+            <div class="bg-white shadow-xl w-[150px] h-[150px] flex items-center justify-center rounded-full mr-10">
+                <img :src="this.dataContainer.sprites.other.showdown.front_default" alt="">
+            </div>
+        </div>
+    </section>
+
 
     <!-- LIKE ALSO-->
     <section>
 
         <div>
-            <h1 class="text-center text-[36px] font-serif text-dark-gray font-bold">You might also like it</h1>
+            <h1 class="text-center text-[36px] font-serif text-dark-gray font-bold mb-12 mt-16">You might also like..</h1>
             <ul class="overflow-x-auto h-[480px] flex pb-2 pt-5">
                 <li v-for="items in peluches" class="ml-5">
                     <!-- CARD -->
@@ -92,11 +139,14 @@ export default {
 
 
                         <!-- IMG -->
-                        <div class="w-[200px] h-[200px] flex items-center justify-center">
-                            <div class="w-[100px]  rounded-lg">
-                                <img :src="'.' + items.img" :alt="items.name">
+                        <RouterLink :to="'/peluche/' + items.name">
+                            <div class="w-[200px] h-[200px] flex items-center justify-center">
+                                <div class="w-[100px]  rounded-lg">
+                                    <img :src="'.' + items.img" :alt="items.name">
+                                </div>
                             </div>
-                        </div>
+                        </RouterLink>
+
                         <!-- TEXT CONTENT -->
 
                         <div class="w-[230px] text-center">
